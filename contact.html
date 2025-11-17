@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Laurel's Organized Chaos | Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+
+    <!-- Header -->
+    <header class="site-header">
+      <div class="logo-area">
+        <span class="logo-mark">☽✧</span>
+        <div class="logo-text">
+          <h1>Laurel's Organized Chaos</h1>
+          <p class="tagline">spooky systems for a beautifully messy life</p>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="store.html" class="nav-link">Store</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- Intro -->
+      <section class="section">
+        <h2 class="section-title">Contact &amp; Work With Me</h2>
+        <p class="section-text">
+          Want to collaborate, ask a question, or reach out about Laurel’s Organized Chaos?
+          This is the place. I’m one human juggling a lot of life, so I can’t promise
+          instant replies — but I do read what you send and I appreciate every message.
+        </p>
+        <p class="section-text" style="margin-top: 0.8rem;">
+          Please be kind, respectful, and remember I’m not a therapist or crisis line —
+          just a witchy, exhausted, soft-hearted goblin doing her best.
+        </p>
+      </section>
+
+      <!-- Ways to reach -->
+      <section class="section">
+        <h3 class="section-title">Ways to Reach Me</h3>
+
+        <div class="card-grid">
+          <article class="card">
+            <p class="card-tag">Email</p>
+            <h4 class="card-title">General &amp; Collabs</h4>
+            <p class="card-snippet">
+              For questions, collaboration ideas, or brand inquiries.
+            </p>
+            <p class="card-snippet" style="margin-top: 0.4rem;">
+              <strong>Email:</strong> <span>youremail@example.com</span>
+              <!-- Replace with your real email when you're ready -->
+            </p>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Social</p>
+            <h4 class="card-title">Follow the Chaos</h4>
+            <p class="card-snippet">
+              Keep up with updates, new products, and unfiltered thoughts.
+            </p>
+            <p class="card-snippet" style="margin-top: 0.4rem;">
+              You can add your socials here later (Instagram, TikTok, etc.).
+            </p>
+          </article>
+
+          <article class="card">
+            <p class="card-tag">Boundaries</p>
+            <h4 class="card-title">Before You Hit Send</h4>
+            <p class="card-snippet">
+              No hate, no harassment, no graphic trauma dumps. You deserve support —
+              I just may not be the right kind of support for emergencies.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contact form (visual only for now) -->
+      <section class="section">
+        <h3 class="section-title">Send a Message</h3>
+        <p class="section-text">
+          This form is here as a visual for now. Later, we can hook it up so it actually
+          sends to your email or a form service. For now, it’s a pretty placeholder
+          you can customize whenever you’re ready.
+        </p>
+
+        <form class="contact-form">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input id="name" type="text" placeholder="Your name" />
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder="you@example.com" />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="reason">What are you reaching out about?</label>
+            <select id="reason">
+              <option value="">Select one</option>
+              <option value="question">I have a question</option>
+              <option value="collab">Collaboration / partnership</option>
+              <option value="feedback">Feedback or kind words</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Type your message here..."></textarea>
+          </div>
+
+          <p class="section-text" style="font-size: 0.8rem; margin-top: 0;">
+            Please don’t share anything extremely graphic or triggering in detail.
+          </p>
+
+          <button type="button" class="btn btn-coffin" style="margin-top: 0.9rem;">
+            <span>Send (Eventually)</span>
+          </button>
+        </form>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Laurel's Organized Chaos · It’s your life, everyone else is just in it.</p>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
