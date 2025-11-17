@@ -48,14 +48,14 @@ const PRODUCTS = [
     ctaLabel: "Buy Now"
   },
   {
-    title: "“It’s Your Life” Gothic Art Print",
-    tag: "Digital Art",
-    price: "$12",
-    description:
-      "Dark feminine artwork featuring the quote “It’s your life, everyone else is just in it” — perfect for walls, desks, or altars.",
-    url: "#",
-    ctaLabel: "Coming Soon"
-  },
+  title: "Witchy Mom Chaos Tote – All-Over Print (15×15)",
+  tag: "Tote Bags",
+  price: "$34",
+  description:
+    "A full-wrap witchy mom tote covered in sarcastic quotes, creatures, chaos clouds, and dark feminine energy. Perfect for errands, witchcraft, and hauling tiny demon supplies.",
+  url: "https://laurelsorganizedchaos.printful.me/product/witchy-mom-chaos-tote",
+  ctaLabel: "Buy Now"
+},
   {
     title: "Chaos Diary: Shadow Work Journal",
     tag: "Journals",
@@ -166,4 +166,5 @@ document.addEventListener("DOMContentLoaded", () => {
     renderProductCards("store-products", PRODUCTS);
   }
 });
+
 
