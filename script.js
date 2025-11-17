@@ -41,7 +41,7 @@ const PRODUCTS = [
   {
     title: "Running on Trauma and Caffeine – Gothic Mug (15oz)",
     tag: "Drinkware",
-    price: "$28",
+    price: "$20",
     description:
       "Full-wrap gothic mug with ornate lettering and a soft smoky background — for witches, moms, students, and anyone running on trauma and caffeine.",
     url: "https://laurelsorganizedchaos.printful.me/checkout",
@@ -166,3 +166,4 @@ document.addEventListener("DOMContentLoaded", () => {
     renderProductCards("store-products", PRODUCTS);
   }
 });
+
