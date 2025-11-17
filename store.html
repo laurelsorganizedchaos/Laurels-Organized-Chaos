@@ -51,102 +51,28 @@
         </p>
       </section>
 
-      <!-- Filters -->
+      <!-- Filters (visual only right now) -->
       <section class="section">
         <div class="section-header-row">
           <h3 class="section-title">Browse by Category</h3>
         </div>
 
-        <!-- Re-using blog filter styles on purpose -->
         <div class="blog-filters">
           <button class="filter-pill filter-pill-active">All</button>
           <button class="filter-pill">Digital Art</button>
           <button class="filter-pill">Journals</button>
           <button class="filter-pill">Wallpapers</button>
-          <button class="filter-pill">Bundles</button>
+          <button class="filter-pill">Bundle</button>
           <button class="filter-pill">Other</button>
         </div>
       </section>
 
-      <!-- Products grid -->
+      <!-- Products grid (auto-filled by script.js) -->
       <section class="section">
         <h3 class="section-title">Featured Products</h3>
 
-        <div class="card-grid">
-
-          <!-- Product 1 -->
-          <article class="card product-card">
-            <p class="card-tag">Digital Art</p>
-            <h4 class="card-title">“It’s Your Life” Gothic Print</h4>
-            <p class="card-snippet">
-              A dark feminine art print featuring the quote
-              “It’s your life, everyone else is just in it” — perfect for walls,
-              desktops, or altars of tired witches.
-            </p>
-            <p class="product-price">$12</p>
-            <button class="card-link">View Details</button>
-          </article>
-
-          <!-- Product 2 -->
-          <article class="card product-card">
-            <p class="card-tag">Journals</p>
-            <h4 class="card-title">Chaos Diary: Shadow Work Journal</h4>
-            <p class="card-snippet">
-              A guided journal for brain dumps, shadow work, and late-night
-              “what the hell am I doing?” sessions. Gentle prompts, dark vibes.
-            </p>
-            <p class="product-price">$18</p>
-            <button class="card-link">View Details</button>
-          </article>
-
-          <!-- Product 3 -->
-          <article class="card product-card">
-            <p class="card-tag">Wallpapers</p>
-            <h4 class="card-title">Witchy Wallpaper Pack</h4>
-            <p class="card-snippet">
-              A set of phone wallpapers in soft goth, witchy, feminine styles
-              so your lock screen matches your inner main character energy.
-            </p>
-            <p class="product-price">$9</p>
-            <button class="card-link">View Details</button>
-          </article>
-
-          <!-- Product 4 -->
-          <article class="card product-card">
-            <p class="card-tag">Bundle</p>
-            <h4 class="card-title">Dark Feminine Essentials Bundle</h4>
-            <p class="card-snippet">
-              A curated bundle of prints, journal pages, and wallpapers to
-              create one cohesive, hauntingly pretty vibe in your space.
-            </p>
-            <p class="product-price">$27</p>
-            <button class="card-link">View Details</button>
-          </article>
-
-          <!-- Product 5 -->
-          <article class="card product-card">
-            <p class="card-tag">Other</p>
-            <h4 class="card-title">Affirmations for Exhausted Witches (Digital)</h4>
-            <p class="card-snippet">
-              Short, honest, slightly feral affirmations for the days when
-              “love and light” just isn’t cutting it.
-            </p>
-            <p class="product-price">$7</p>
-            <button class="card-link">View Details</button>
-          </article>
-
-          <!-- Product 6 -->
-          <article class="card product-card">
-            <p class="card-tag">Journals</p>
-            <h4 class="card-title">Soft Apocalypse: Daily Reflection Pages</h4>
-            <p class="card-snippet">
-              Printable reflection pages for when life feels like a slow-motion
-              apocalypse, but you’re still here, still trying.
-            </p>
-            <p class="product-price">$15</p>
-            <button class="card-link">View Details</button>
-          </article>
-
+        <div id="store-products" class="card-grid">
+          <!-- Product cards will be injected by script.js -->
         </div>
       </section>
 
@@ -154,7 +80,7 @@
       <section class="section">
         <h3 class="section-title">Coming Later</h3>
         <p class="section-text">
-          Eventually, this shop will connect to real payment + delivery options
+          Eventually, this shop can connect to real payment + delivery options
           (like Etsy, a print-on-demand service, or a full e-commerce setup).
           For now, this page is your visual storefront — a place to shape how
           you want Laurel’s Organized Chaos to live as a brand.
@@ -181,5 +107,6 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <script src="script.js"></script>
 </body>
 </html>
