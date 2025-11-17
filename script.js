@@ -33,29 +33,43 @@ const BLOG_POSTS = [
 
 // ===== STORE PRODUCTS =====
 // Edit this list as you add more things.
-//
 // url:
-//   - use your Printful/Printify/checkout link
+//   - use your Printful/Printify/checkout/product link
 //   - or "#" for coming soon
 const PRODUCTS = [
-{
-  title: "Running on Trauma and Caffeine – Gothic Mug (15oz)",
-  tag: "Drinkware",
-  price: "$20",
-  description:
-    "Full-wrap gothic mug with ornate lettering and a soft smoky background — for witches, moms, students, and anyone running on trauma and caffeine.",
-  url: "https://laurelsorganizedchaos.printful.me/product/running-on-trauma-and-caffeine-gothic-mug-15oz-wrap",
-  ctaLabel: "Buy Now"
-},
+  // LIVE PRODUCTS
+
   {
-  title: "Witchy Mom Chaos Tote – All-Over Print (15×15)",
-  tag: "Tote Bags",
-  price: "$32",
-  description:
-    "A full-wrap witchy mom tote covered in sarcastic quotes, creatures, chaos clouds, and dark feminine energy. Perfect for errands, witchcraft, and hauling tiny demon supplies.",
-  url: "https://laurelsorganizedchaos.printful.me/product/witchy-mom-chaos-tote",
-  ctaLabel: "Buy Now"
-},
+    title: "Running on Trauma and Caffeine – Gothic Mug (15oz)",
+    tag: "Drinkware",
+    price: "$28",
+    description:
+      "Full-wrap gothic mug with ornate lettering and a soft smoky background — for witches, moms, students, and anyone running on trauma and caffeine.",
+    url: "https://laurelsorganizedchaos.printful.me/product/running-on-trauma-and-caffeine-gothic-mug-15oz-wrap",
+    ctaLabel: "Buy Now"
+  },
+
+  {
+    title: "Witchy Mom Chaos Tote – All-Over Print (15×15)",
+    tag: "Tote Bags",
+    price: "$34",
+    description:
+      "All-over print witchy mom tote covered in sarcastic quotes, crows, swirling chaos clouds, and dark feminine energy. Perfect for errands, witchcraft, and hauling tiny demon supplies.",
+    url: "https://laurelsorganizedchaos.printful.me/product/witchy-mom-chaos-tote",
+    ctaLabel: "Buy Now"
+  },
+
+  // COMING SOON / FUTURE PRODUCTS
+
+  {
+    title: "“It’s Your Life” Gothic Art Print",
+    tag: "Digital Art",
+    price: "$12",
+    description:
+      "Dark feminine artwork featuring the quote “It’s your life, everyone else is just in it” — perfect for walls, desks, or altars of tired witches.",
+    url: "#",
+    ctaLabel: "Coming Soon"
+  },
   {
     title: "Chaos Diary: Shadow Work Journal",
     tag: "Journals",
@@ -166,6 +180,3 @@ document.addEventListener("DOMContentLoaded", () => {
     renderProductCards("store-products", PRODUCTS);
   }
 });
-
-
-
