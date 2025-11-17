@@ -20,7 +20,7 @@ const BLOG_POSTS = [
     title: "The Softness in Starting Over",
     tag: "Self",
     snippet:
-      "Starting over isn’t always dramatic. Sometimes it’s quiet, shaky decisions that no one claps for — but change everything."
+      "Starting over isn’t always dramatic. Sometimes it’s quiet, shaky decisions that no one claps for — but they quietly change everything."
   },
   {
     slug: "post-burn-it-down.html",
@@ -32,46 +32,56 @@ const BLOG_POSTS = [
 ];
 
 // ===== STORE PRODUCTS =====
-// You can change titles, prices, descriptions, and URLs here.
+// Edit this list as you add more things.
+//
 // url:
-// - set to "#" for “coming soon”
-// - or "https://etsy.com/your-product" (or a .html file) when ready
+//   - use your Printful/Printify/checkout link
+//   - or "#" for coming soon
 const PRODUCTS = [
+  {
+    title: "Running on Trauma and Caffeine – Gothic Mug (15oz)",
+    tag: "Drinkware",
+    price: "$28",
+    description:
+      "Full-wrap gothic mug with ornate lettering and a soft smoky background — for witches, moms, students, and anyone running on trauma and caffeine.",
+    url: "https://laurelsorganizedchaos.printful.me/checkout",
+    ctaLabel: "Buy Now"
+  },
   {
     title: "“It’s Your Life” Gothic Art Print",
     tag: "Digital Art",
     price: "$12",
     description:
-      "Dark feminine artwork featuring the quote “It’s your life, everyone else is just in it” for your wall, altar, or lockscreen.",
+      "Dark feminine artwork featuring the quote “It’s your life, everyone else is just in it” — perfect for walls, desks, or altars.",
     url: "#",
-    ctaLabel: "View Details"
+    ctaLabel: "Coming Soon"
   },
   {
     title: "Chaos Diary: Shadow Work Journal",
     tag: "Journals",
     price: "$18",
     description:
-      "A guided journal for brain dumps, shadow work, and late-night “what am I even doing?” writing sessions.",
+      "A guided journal for brain dumps, shadow work, and late-night “what am I even doing?” sessions.",
     url: "#",
-    ctaLabel: "View Details"
+    ctaLabel: "Coming Soon"
   },
   {
     title: "Witchy Wallpaper Pack",
     tag: "Wallpapers",
     price: "$9",
     description:
-      "A set of witchy, dark feminine phone wallpapers so your lock screen matches your inner main character energy.",
+      "A set of witchy, dark feminine phone wallpapers so your lock screen matches your inner main-character chaos.",
     url: "#",
-    ctaLabel: "View Details"
+    ctaLabel: "Coming Soon"
   },
   {
     title: "Dark Feminine Essentials Bundle",
     tag: "Bundle",
     price: "$27",
     description:
-      "A curated bundle of prints, journal pages, and wallpapers to create one cohesive, haunting vibe in your space.",
+      "A curated bundle of prints, journal pages, and wallpapers to create one cohesive, haunting aesthetic.",
     url: "#",
-    ctaLabel: "View Details"
+    ctaLabel: "Coming Soon"
   },
   {
     title: "Affirmations for Exhausted Witches (Digital)",
@@ -80,22 +90,13 @@ const PRODUCTS = [
     description:
       "Short, honest, slightly feral affirmations for the days when “love and light” just isn’t cutting it.",
     url: "#",
-    ctaLabel: "View Details"
-  },
-  {
-    title: "Soft Apocalypse: Daily Reflection Pages",
-    tag: "Journals",
-    price: "$15",
-    description:
-      "Printable reflection pages for when life feels like a slow-motion apocalypse, but you’re still here, still trying.",
-    url: "#",
-    ctaLabel: "View Details"
+    ctaLabel: "Coming Soon"
   }
 ];
 
 // ===== HELPERS =====
 
-// Render blog cards
+// Render blog cards into a container
 function renderBlogCards(containerId, postsToRender) {
   const container = document.getElementById(containerId);
   if (!container) return;
@@ -118,29 +119,30 @@ function renderBlogCards(containerId, postsToRender) {
   container.innerHTML = cardsHtml;
 }
 
-// Render product cards
+// Render product cards into a container
 function renderProductCards(containerId, productsToRender) {
   const container = document.getElementById(containerId);
   if (!container) return;
 
   const cardsHtml = productsToRender
-    .map(
-      (product) => `
-      <article class="card product-card">
-        <p class="card-tag">${product.tag}</p>
-        <h4 class="card-title">${product.title}</h4>
-        <p class="card-snippet">
-          ${product.description}
-        </p>
-        <p class="product-price">${product.price}</p>
-        ${
-          product.url
-            ? `<a href="${product.url}" class="card-link">${product.ctaLabel || "View Details"}</a>`
-            : `<button class="card-link" type="button">${product.ctaLabel || "Coming Soon"}</button>`
-        }
-      </article>
-    `
-    )
+    .map((product) => {
+      const hasLink = product.url && product.url !== "#";
+      const actionHtml = hasLink
+        ? `<a href="${product.url}" class="card-link" target="_blank" rel="noopener noreferrer">${product.ctaLabel || "Buy Now"}</a>`
+        : `<button class="card-link" type="button" disabled>${product.ctaLabel || "Coming Soon"}</button>`;
+
+      return `
+        <article class="card product-card">
+          <p class="card-tag">${product.tag}</p>
+          <h4 class="card-title">${product.title}</h4>
+          <p class="card-snippet">
+            ${product.description}
+          </p>
+          <p class="product-price">${product.price}</p>
+          ${actionHtml}
+        </article>
+      `;
+    })
     .join("");
 
   container.innerHTML = cardsHtml;
