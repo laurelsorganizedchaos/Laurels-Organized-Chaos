@@ -5,7 +5,7 @@
   <title>Laurel's Organized Chaos | Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Temporary font until Belion Radego is installed -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -42,9 +42,9 @@
           <p class="hero-overline">Hi, I'm Laurel.</p>
           <h2>It’s your life. Everyone else is just in it.</h2>
           <p class="hero-body">
-            I’m a goth-leaning, chaos-juggling mom and student, turning
-            burnout, breakdowns, and dark humor into a lifestyle brand that
-            helps messy humans feel seen — and maybe even a little powerful.
+            I’m a goth-leaning, chaos-juggling mom and student, turning burnout,
+            breakdowns, and dark humor into a lifestyle brand that helps messy
+            humans feel seen — and maybe even a little powerful.
           </p>
 
           <div class="hero-actions">
@@ -74,10 +74,10 @@
         <h3 class="section-title">What is Laurel’s Organized Chaos?</h3>
         <p class="section-text">
           A darkly whimsical blend of witchy aesthetic, honest storytelling, and
-          chaotic beauty. I’ve rebuilt my life more times than I can count
-          through motherhood, school, survival, and healing. This space is where
-          I turn that journey into creativity, products, and real talk — for
-          anyone who feels like their life is equal parts magic and mess.
+          chaotic beauty. I’ve rebuilt my life more times than I can count through
+          motherhood, school, survival, and healing. This space is where I turn that
+          journey into creativity, products, and real talk — for anyone who feels like
+          their life is equal parts magic and mess.
         </p>
       </section>
 
@@ -114,13 +114,14 @@
           </article>
         </div>
       </section>
+
       <!-- Latest Blog Posts (auto-filled by script.js) -->
       <section class="section">
         <div class="section-header-row">
           <h3 class="section-title">Latest from the Blog</h3>
           <a href="blog.html" class="section-link">Read all posts →</a>
         </div>
-        
+
         <div id="latest-posts" class="card-grid">
           <!-- Cards will be injected here by script.js -->
         </div>
@@ -159,4 +160,26 @@
             <h4 class="card-title">Witchy Wallpapers</h4>
             <p class="card-snippet">
               A pack of dark, feminine, aesthetic phone wallpapers to keep the
+              vibe with you everywhere.
+            </p>
+            <button class="card-link">View Details</button>
+          </article>
 
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Laurel's Organized Chaos · It’s your life, everyone else is just in it.</p>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
