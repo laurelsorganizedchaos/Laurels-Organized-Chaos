@@ -536,6 +536,86 @@ h4 {
   border-color: #666;
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
 }
+/* BLOG POST STYLING */
+.page-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: #f4f4f4;
+}
+
+.blog-post {
+  line-height: 1.7;
+  font-size: 18px;
+}
+
+.post-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.post-tag {
+  color: #ff80c8;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.post-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.post-meta {
+  font-size: 14px;
+  color: #bbbbbb;
+}
+
+.post-divider {
+  margin: 30px 0;
+  border: none;
+  border-bottom: 1px solid #444;
+}
+
+.post-section {
+  margin-bottom: 35px;
+}
+
+.post-subtitle {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #ff9fe6;
+}
+
+.post-photo {
+  margin: 25px 0;
+  text-align: center;
+}
+
+.post-photo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+.post-photo figcaption {
+  font-size: 14px;
+  color: #cccccc;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.post-quote {
+  margin: 20px auto;
+  font-size: 22px;
+  font-style: italic;
+  text-align: center;
+  color: #ff8cd6;
+}
 
 /* Footer */
 .site-footer {
@@ -589,5 +669,6 @@ h4 {
     font-size: 1.5rem;
   }
 }
+
 
 
