@@ -2,6 +2,13 @@
 // Newest first
 const BLOG_POSTS = [
   {
+    slug: "post-wedding-day.html",
+    title: "Our Perfectly Chaotic Flamingo Las Vegas Wedding — 11/11/2025",
+    tag: "Wedding",
+    snippet:
+      "How a 6 AM wakeup, a canceled officiant, Vegas chaos, and three kids still turned into the most perfect night of my life."
+  },
+  {
     slug: "post-motherhood-without-the-mask.html",
     title: "Motherhood Without the Mask",
     tag: "Mom Life",
@@ -180,3 +187,4 @@ document.addEventListener("DOMContentLoaded", () => {
     renderProductCards("store-products", PRODUCTS);
   }
 });
+
