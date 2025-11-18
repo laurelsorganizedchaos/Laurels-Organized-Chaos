@@ -1,13 +1,13 @@
 // ===== BLOG POSTS =====
 // Newest first
 const BLOG_POSTS = [
-{
-  slug: "post-wedding-day.html",
-  title: "Our Perfectly Chaotic Flamingo Las Vegas Wedding — 11/11/2025",
-  tag: "Wedding",
-  snippet:
-    "How a 6 AM wakeup, a canceled officiant, Vegas chaos, and three kids still turned into the most perfect night of my life."
-},
+  {
+    slug: "post-wedding-day.html",
+    title: "Our Perfectly Chaotic Flamingo Las Vegas Wedding — 11/11/2025",
+    tag: "Wedding",
+    snippet:
+      "How a 6 AM wakeup, a canceled officiant, Vegas chaos, and three kids still turned into the most perfect night of my life."
+  },
   {
     slug: "post-motherhood-without-the-mask.html",
     title: "Motherhood Without the Mask",
@@ -39,13 +39,11 @@ const BLOG_POSTS = [
 ];
 
 // ===== STORE PRODUCTS =====
-// Edit this list as you add more things.
 // url:
 //   - use your Printful/Printify/checkout/product link
 //   - or "#" for coming soon
 const PRODUCTS = [
   // LIVE PRODUCTS
-
   {
     title: "Running on Trauma and Caffeine – Gothic Mug (15oz)",
     tag: "Drinkware",
@@ -55,7 +53,6 @@ const PRODUCTS = [
     url: "https://laurelsorganizedchaos.printful.me/product/running-on-trauma-and-caffeine-gothic-mug-15oz-wrap",
     ctaLabel: "Buy Now"
   },
-
   {
     title: "Witchy Mom Chaos Tote – All-Over Print (15×15)",
     tag: "Tote Bags",
@@ -67,7 +64,6 @@ const PRODUCTS = [
   },
 
   // COMING SOON / FUTURE PRODUCTS
-
   {
     title: "“It’s Your Life” Gothic Art Print",
     tag: "Digital Art",
@@ -187,5 +183,3 @@ document.addEventListener("DOMContentLoaded", () => {
     renderProductCards("store-products", PRODUCTS);
   }
 });
-
-
