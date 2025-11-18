@@ -331,22 +331,36 @@ h4 {
   line-height: 1.5;
 }
 
+/* Card link / buttons (used for blog + store) */
 .card-link {
   margin-top: 0.65rem;
   align-self: flex-start;
-  border-radius: 999px;
-  border: 1px solid var(--border-subtle);
-  padding: 0.35rem 0.9rem;
+  display: inline-block;
+  padding: 0.65rem 1.2rem;
   font-size: 0.8rem;
-  background: transparent;
-  color: var(--text-main);
+  color: #fff;
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 999px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
   cursor: pointer;
-  transition: all 0.18s ease-out;
+  transition: 0.3s ease;
 }
 
 .card-link:hover {
-  border-color: var(--accent-soft);
-  background: rgba(184, 92, 255, 0.1);
+  background: #1c1c1c;
+  border-color: #666;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
+}
+
+/* Disabled button state (for Coming Soon) */
+.card-link:disabled,
+.card-link[disabled] {
+  opacity: 0.45;
+  cursor: default;
+  box-shadow: none;
 }
 
 /* ==== Forms (Contact page) ==== */
@@ -421,6 +435,7 @@ h4 {
     flex-direction: column;
   }
 }
+
 /* ==== Blog filters ==== */
 .blog-filters {
   margin-top: 0.4rem;
@@ -452,6 +467,7 @@ h4 {
   color: var(--text-main);
   background: rgba(184, 92, 255, 0.22);
 }
+
 /* ==== Store extras ==== */
 .product-price {
   margin: 0.35rem 0 0;
@@ -459,27 +475,43 @@ h4 {
   font-weight: 600;
   color: var(--text-main);
 }
-/* ==== Single blog post ==== */
+
+/* ==== Single Blog Post (clean unified) ==== */
+
+.page-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: var(--text-main);
+}
+
 .blog-post {
   max-width: 780px;
   margin-inline: auto;
+  line-height: 1.75;
+  font-size: 1rem;
+  color: var(--text-muted);
 }
 
+/* Header */
 .post-header {
-  margin-bottom: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .post-tag {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.18em;
   color: var(--accent-soft);
-  margin: 0 0 0.4rem;
+  margin: 0 0 0.35rem;
 }
 
 .post-title {
   margin: 0 0 0.4rem;
-  font-size: 1.6rem;
+  font-size: 2.2rem;
+  color: var(--text-main);
+  font-family: "Cinzel", serif;
 }
 
 .post-meta {
@@ -488,133 +520,80 @@ h4 {
   color: var(--text-muted);
 }
 
-.post-body {
-  margin-top: 1.2rem;
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: var(--text-muted);
-}
-
-.post-body h2 {
-  margin-top: 1.4rem;
-  margin-bottom: 0.6rem;
-  font-size: 1.05rem;
-}
-
-.post-body p {
-  margin: 0 0 0.8rem;
-}
-
-.post-body ul {
-  margin: 0 0 1rem 1.2rem;
-  padding: 0;
-}
-
-.post-body li {
-  margin-bottom: 0.4rem;
-}
-
-.post-footer-nav {
-  margin-top: 1.6rem;
-}
-.card-link {
-  display: inline-block;
-  padding: 0.65rem 1.2rem;
-  font-size: 0.9rem;
-  color: #fff;
-  background: #111;
-  border: 1px solid #444;
-  border-radius: 6px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-.card-link:hover {
-  background: #1c1c1c;
-  border-color: #666;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
-}
-/* BLOG POST STYLING */
-.page-section {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  color: #f4f4f4;
-}
-
-.blog-post {
-  line-height: 1.7;
-  font-size: 18px;
-}
-
-.post-header {
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.post-tag {
-  color: #ff80c8;
-  font-size: 14px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-.post-title {
-  font-size: 36px;
-  font-weight: bold;
-  color: #ffffff;
-  margin-bottom: 10px;
-}
-
-.post-meta {
-  font-size: 14px;
-  color: #bbbbbb;
-}
-
+/* Divider */
 .post-divider {
-  margin: 30px 0;
+  margin: 2.2rem 0;
   border: none;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid var(--border-subtle);
 }
 
+/* Section content */
 .post-section {
-  margin-bottom: 35px;
+  margin-bottom: 2.4rem;
 }
 
 .post-subtitle {
-  font-size: 26px;
-  margin-bottom: 15px;
-  color: #ff9fe6;
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  color: var(--accent);
+  font-family: "Cinzel", serif;
 }
 
+/* Images */
 .post-photo {
-  margin: 25px 0;
+  margin: 1.8rem 0;
   text-align: center;
 }
 
 .post-photo img {
   max-width: 100%;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.65);
 }
 
 .post-photo figcaption {
-  font-size: 14px;
-  color: #cccccc;
-  margin-top: 8px;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
   font-style: italic;
 }
 
+/* Quote block */
 .post-quote {
-  margin: 20px auto;
-  font-size: 22px;
+  margin: 1.5rem auto;
+  padding: 1rem 1.5rem;
+  font-size: 1.25rem;
   font-style: italic;
+  color: var(--accent);
   text-align: center;
-  color: #ff8cd6;
+  border-left: 3px solid var(--accent-soft);
+  border-right: 3px solid var(--accent-soft);
+  border-radius: 10px;
+  background: rgba(184, 92, 255, 0.05);
+}
+
+/* Footer nav on posts */
+.post-footer-nav {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.post-footer-nav a {
+  display: inline-block;
+  padding: 0.7rem 1.3rem;
+  background: rgba(9, 7, 13, 0.95);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  font-size: 0.85rem;
+  color: var(--text-main);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.post-footer-nav a:hover {
+  background: rgba(184, 92, 255, 0.12);
+  border-color: var(--accent-soft);
 }
 
 /* Footer */
@@ -668,7 +647,17 @@ h4 {
   .hero-text h2 {
     font-size: 1.5rem;
   }
+
+  .post-title {
+    font-size: 1.65rem;
+  }
+
+  .post-subtitle {
+    font-size: 1.15rem;
+  }
+
+  .post-quote {
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+  }
 }
-
-
-
