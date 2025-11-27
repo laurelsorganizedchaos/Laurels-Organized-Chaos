@@ -2,6 +2,13 @@
 // Newest first
 const BLOG_POSTS = [
   {
+  slug: "chaotically-blessed-thanksgiving.html",
+  title: "A Chaotically Blessed Thanksgiving (Hold the Family Drama)",
+  tag: "Mom Life",
+  snippet:
+    "Choosing peace over toxic family drama, cooking a full feast with three tiny humans, and creating our own chaotic little Thanksgiving tradition.",
+},
+  {
     slug: "post-wedding-day.html",
     title: "Our Perfectly Chaotic Flamingo Las Vegas Wedding — 11/11/2025",
     tag: "Wedding",
@@ -183,3 +190,4 @@ document.addEventListener("DOMContentLoaded", () => {
     renderProductCards("store-products", PRODUCTS);
   }
 });
+
