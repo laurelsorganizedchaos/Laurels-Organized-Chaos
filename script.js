@@ -21,7 +21,7 @@ const POSTS = [
       "When your husband isn’t welcome, neither are you or your kids — so you build your own Thanksgiving that’s drama-free, chaotic, and actually full of love."
   },
   {
-    slug: "post-motherhood-without-the-mask.html",
+    slug: "motherhood-without-the-mask.html",
     title: "Motherhood Without the Mask",
     tag: "Motherhood",
     date: "2025-11-10",
@@ -29,21 +29,39 @@ const POSTS = [
       "Yes, you would die for your kids. Yes, there are days you fantasize about silence. Both can be true, and it doesn’t make you a bad mom."
   },
   {
-    slug: "post-wedding-day.html",
+    slug: "our-vegas-wedding-day.html",
     title: "Our Vegas Wedding Day: Chaos, Nerves, and So Much Love",
     tag: "Love & Marriage",
     date: "2025-11-12",
     snippet:
       "Exhaustion, anxiety, and last-minute changes somehow turned into the most intimate, perfect dark fairytale on 11/11."
+  },
+
+  // 🔮 NEW POSTS YOU ASKED TO ADD
+  {
+    slug: "post-organized-chaos.html",
+    title: "Post-Organized Chaos: Systems That Actually Fit My Messy Life",
+    tag: "Life Design",
+    date: "2025-10-25",
+    snippet:
+      "Instead of forcing myself into rigid routines that never last, I started building soft, witchy systems around the life I actually have — not the imaginary one in my head."
+  },
+  {
+    slug: "post-softness-starting-over.html",
+    title: "Softness in Starting Over",
+    tag: "Healing",
+    date: "2025-10-15",
+    snippet:
+      "Starting over used to feel like failure. Now it feels like the bravest kind of softness — choosing to be new again when life keeps trying to harden you."
+  },
+  {
+    slug: "post-burn-it-down.html",
+    title: "Burn It Down (On Purpose)",
+    tag: "Shadow Work",
+    date: "2025-10-01",
+    snippet:
+      "Sometimes the most responsible thing you can do is light a match to the version of your life that’s killing you slowly, and rebuild from the ashes on your own terms."
   }
-  // Add more:
-  // {
-  //   slug: "your-post-file.html",
-  //   title: "Your Post Title",
-  //   tag: "Category / Tag",
-  //   date: "2025-12-01",
-  //   snippet: "Short, witchy summary of the chaos in this post."
-  // },
 ];
 
 // ---------- Utilities ----------
@@ -69,10 +87,11 @@ function getTarotSymbol(tag = "") {
   const t = tag.toLowerCase();
   if (t.includes("mom") || t.includes("mother")) return "☾";
   if (t.includes("marriage") || t.includes("love")) return "🪶";
-  if (t.includes("mental")) return "☿";
+  if (t.includes("mental") || t.includes("healing")) return "☿";
   if (t.includes("money") || t.includes("business")) return "♃";
   if (t.includes("school") || t.includes("study")) return "✦";
-  return "🩸";
+  if (t.includes("shadow")) return "🩸";
+  return "✶";
 }
 
 // build tarot card HTML
@@ -155,4 +174,3 @@ document.addEventListener("DOMContentLoaded", () => {
   renderBlogList();
   highlightActiveNav();
 });
-
