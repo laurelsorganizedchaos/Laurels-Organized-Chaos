@@ -2,153 +2,114 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Laurel's Organized Chaos | Contact</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laurel’s Organized Chaos – Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Gothic fantasy fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="page">
+  <header class="site-header">
+    <div>
+      <div class="logo-text">Laurel’s Organized Chaos</div>
+      <div class="site-tagline">send a message from inside the chaos.</div>
+    </div>
 
-    <!-- Header -->
-    <header class="site-header">
-      <div class="logo-area">
-        <span class="logo-mark">☽✧</span>
-        <div class="logo-text">
-          <h1>Laurel's Organized Chaos</h1>
-          <p class="tagline">spooky systems for a beautifully messy life</p>
-        </div>
+    <nav class="nav-links">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="blog.html" data-nav="blog">Blog</a>
+      <a href="store.html" data-nav="store">Store</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="contact.html" data-nav="contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page-wrapper">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="rune-frame">
+        <div class="rune-frame-side left">ᛞ ᛟ ᛉ ᛇ</div>
+        <div class="rune-frame-side right">ᛇ ᛉ ᛟ ᛞ</div>
+
+        <h1 class="hero-title">Summon the Chaos Queen</h1>
+        <p class="hero-lead">
+          Questions, collaborations, gentle feedback, or “same, girl” messages are welcome.
+        </p>
+        <p class="hero-sub">
+          I’m usually juggling kids, school, healing, and building this little goth empire — so I may
+          not respond instantly, but I do read everything from actual humans who aren’t being weird.
+        </p>
       </div>
+    </section>
 
-      <nav class="main-nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="blog.html" class="nav-link">Blog</a>
-        <a href="store.html" class="nav-link">Store</a>
-        <a href="contact.html" class="nav-link active">Contact</a>
-      </nav>
-    </header>
+    <!-- Blood-drip divider -->
+    <div class="divider-blood" aria-hidden="true">
+      <div class="divider-blood-line"></div>
+      <div class="drip d1"></div>
+      <div class="drip d2"></div>
+      <div class="drip d3"></div>
+    </div>
 
-    <main>
+    <!-- Contact "form" (non-functional, but ready for backend later) -->
+    <section>
+      <h2>Message Me</h2>
+      <p class="hero-sub" style="max-width: 560px;">
+        This isn’t wired to a backend yet, but you can use this layout as a guide for what you’ll
+        eventually want in a form. For now, you can reach me through whatever platform you’re most
+        active on while I set up the logistics.
+      </p>
 
-      <!-- Intro -->
-      <section class="section">
-        <h2 class="section-title">Contact &amp; Work With Me</h2>
-        <p class="section-text">
-          Want to collaborate, ask a question, or reach out about Laurel’s Organized Chaos?
-          This is the place. I’m one human juggling a lot of life, so I can’t promise
-          instant replies — but I do read what you send and I appreciate every message.
-        </p>
-        <p class="section-text" style="margin-top: 0.8rem;">
-          Please be kind, respectful, and remember I’m not a therapist or crisis line —
-          just a witchy, exhausted, soft-hearted goblin doing her best.
-        </p>
-      </section>
-
-      <!-- Ways to reach -->
-      <section class="section">
-        <h3 class="section-title">Ways to Reach Me</h3>
-
-        <div class="card-grid">
-          <article class="card">
-            <p class="card-tag">Email</p>
-            <h4 class="card-title">General &amp; Collabs</h4>
-            <p class="card-snippet">
-              For questions, collaboration ideas, or brand inquiries.
-            </p>
-            <p class="card-snippet" style="margin-top: 0.4rem;">
-              <strong>Email:</strong>
-              <a href="mailto:laurelsorganizedchaos@gmail.com">laurelsorganizedchaos@gmail.com</a>
-              <!-- Update this address anytime you want -->
-            </p>
-          </article>
-
-          <article class="card">
-            <p class="card-tag">Social</p>
-            <h4 class="card-title">Follow the Chaos</h4>
-            <p class="card-snippet">
-              Keep up with updates, new products, and unfiltered thoughts.
-            </p>
-            <p class="card-snippet" style="margin-top: 0.4rem;">
-              You can add your socials here later (Instagram, TikTok, etc.).
-            </p>
-          </article>
-
-          <article class="card">
-            <p class="card-tag">Boundaries</p>
-            <h4 class="card-title">Before You Hit Send</h4>
-            <p class="card-snippet">
-              No hate, no harassment, no graphic trauma dumps. You deserve support —
-              I just may not be the right kind of support for emergencies.
-            </p>
-          </article>
+      <form style="max-width: 520px; margin-top: 1.6rem;">
+        <div style="margin-bottom: 1rem;">
+          <label for="name" style="display:block; font-size:0.95rem; margin-bottom:0.25rem;">Name</label>
+          <input id="name" type="text" placeholder="Who’s creeping in my inbox?"
+                 style="width:100%; padding:0.6rem 0.7rem; border-radius:0.6rem; border:1px solid var(--border-subtle); background:rgba(6,3,12,0.9); color:var(--text-main);">
         </div>
-      </section>
 
-      <!-- Contact form (visual only for now) -->
-      <section class="section">
-        <h3 class="section-title">Send a Message</h3>
-        <p class="section-text">
-          This form is here as a visual for now. Later, we can hook it up so it actually
-          sends to your email or a form service. For now, it’s a pretty placeholder
-          you can customize whenever you’re ready.
-        </p>
+        <div style="margin-bottom: 1rem;">
+          <label for="email" style="display:block; font-size:0.95rem; margin-bottom:0.25rem;">Email</label>
+          <input id="email" type="email" placeholder="So I can scream back into the void"
+                 style="width:100%; padding:0.6rem 0.7rem; border-radius:0.6rem; border:1px solid var(--border-subtle); background:rgba(6,3,12,0.9); color:var(--text-main);">
+        </div>
 
-        <form class="contact-form">
-          <div class="form-row">
-            <div class="form-field">
-              <label for="name">Name</label>
-              <input id="name" type="text" placeholder="Your name" />
-            </div>
+        <div style="margin-bottom: 1rem;">
+          <label for="topic" style="display:block; font-size:0.95rem; margin-bottom:0.25rem;">What’s this about?</label>
+          <select id="topic"
+                  style="width:100%; padding:0.6rem 0.7rem; border-radius:0.6rem; border:1px solid var(--border-subtle); background:rgba(6,3,12,0.9); color:var(--text-main);">
+            <option>Just saying hi</option>
+            <option>Blog feedback</option>
+            <option>Collaboration / idea</option>
+            <option>Store / product question</option>
+            <option>Other chaos</option>
+          </select>
+        </div>
 
-            <div class="form-field">
-              <label for="email">Email</label>
-              <input id="email" type="email" placeholder="you@example.com" />
-            </div>
-          </div>
+        <div style="margin-bottom: 1rem;">
+          <label for="message" style="display:block; font-size:0.95rem; margin-bottom:0.25rem;">Message</label>
+          <textarea id="message" rows="5"
+                    placeholder="Overshare as needed. I get it."
+                    style="width:100%; padding:0.6rem 0.7rem; border-radius:0.6rem; border:1px solid var(--border-subtle); background:rgba(6,3,12,0.9); color:var(--text-main); resize:vertical;"></textarea>
+        </div>
 
-          <div class="form-field">
-            <label for="reason">What are you reaching out about?</label>
-            <select id="reason">
-              <option value="">Select one</option>
-              <option value="question">I have a question</option>
-              <option value="collab">Collaboration / partnership</option>
-              <option value="feedback">Feedback or kind words</option>
-              <option value="other">Something else</option>
-            </select>
-          </div>
+        <button type="button"
+                style="margin-top:0.6rem; padding:0.6rem 1.4rem; border-radius:999px; border:1px solid var(--accent-purple); background:linear-gradient(90deg, rgba(255,62,158,0.18), rgba(187,107,255,0.2)); color:var(--text-main); font-family:'Cormorant Garamond',serif; letter-spacing:0.06em; text-transform:uppercase; cursor:not-allowed; opacity:0.6;">
+          Submit (Soon)
+        </button>
+      </form>
+    </section>
+  </main>
 
-          <div class="form-field">
-            <label for="message">Message</label>
-            <textarea id="message" rows="5" placeholder="Type your message here..."></textarea>
-          </div>
-
-          <p class="section-text" style="font-size: 0.8rem; margin-top: 0;">
-            Please don’t share anything extremely graphic or triggering in detail.
-          </p>
-
-          <button type="button" class="btn btn-coffin" style="margin-top: 0.9rem;">
-            <span>Send (Eventually)</span>
-          </button>
-        </form>
-      </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-      <p>© <span id="year"></span> Laurel's Organized Chaos · It’s your life, everyone else is just in it.</p>
-    </footer>
-
+  <!-- Animated neon witch sigil -->
+  <div class="sigil" aria-hidden="true">
+    <div class="sigil-ring"></div>
+    <div class="sigil-core"></div>
   </div>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <footer class="site-footer">
+    © 2025 Laurel’s Organized Chaos · Chaos, but make it witchy.
+  </footer>
 </body>
 </html>
