@@ -12,6 +12,15 @@ const BLOG_BASE_PATH = "";
 
 // Master post list – add new posts here
 const POSTS = [
+ {
+  slug: "post-value-dental.html",
+  title: "Value Dental of Reno: The Clinic That Ghosted Me",
+  tag: "Review",
+  date: "2025-11-27", // or whatever date you want
+  snippet:
+    "My honest experience with Value Dental of Reno — from a hopeful start to being completely ghosted after major dental surgery."
+},
+
   {
     slug: "chaotically-blessed-thanksgiving.html",
     title: "A Chaotically Blessed Thanksgiving (Hold the Family Drama)",
@@ -177,3 +186,4 @@ document.addEventListener("DOMContentLoaded", () => {
   renderBlogList();
   highlightActiveNav();
 });
+
