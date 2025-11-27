@@ -1,193 +1,59 @@
-// ===== BLOG POSTS =====
-// Newest first
-const BLOG_POSTS = [
+// =============================================
+// Laurel's Organized Chaos – Blog Script
+// Auto-updating blog list + latest posts
+// Matches the gothic black/pink/purple/blue theme
+// =============================================
+
+// Change this if your post files live somewhere else
+// ""  -> files are in the root
+// "blog/" -> files live in /blog/ folder (default)
+const BLOG_BASE_PATH = "blog/";
+
+// Master list of blog posts.
+// Add a new post by adding a new object to this array.
+const POSTS = [
   {
-  slug: "chaotically-blessed-thanksgiving.html",
-  title: "A Chaotically Blessed Thanksgiving (Hold the Family Drama)",
-  tag: "Mom Life",
-  snippet:
-    "Choosing peace over toxic family drama, cooking a full feast with three tiny humans, and creating our own chaotic little Thanksgiving tradition.",
-},
-  {
-    slug: "post-wedding-day.html",
-    title: "Our Perfectly Chaotic Flamingo Las Vegas Wedding — 11/11/2025",
-    tag: "Wedding",
-    snippet:
-      "How a 6 AM wakeup, a canceled officiant, Vegas chaos, and three kids still turned into the most perfect night of my life."
-  },
-  {
-    slug: "post-motherhood-without-the-mask.html",
-    title: "Motherhood Without the Mask",
+    slug: "chaotically-blessed-thanksgiving.html",
+    title: "A Chaotically Blessed Thanksgiving (Hold the Family Drama)",
     tag: "Mom Life",
+    date: "2025-11-23",
     snippet:
       "Loving your kids fiercely while admitting this shit is hard — no Pinterest perfection, just real feelings and real exhaustion."
   },
   {
-    slug: "post-organized-chaos.html",
-    title: "Organized Chaos: Brains, Burnout & Being Human",
-    tag: "Mental Health",
+    slug: "motherhood-without-the-mask.html",
+    title: "Motherhood Without the Mask",
+    tag: "Motherhood",
+    date: "2025-11-10",
     snippet:
-      "For the days when existing feels like the only thing you accomplished — and it still counts."
+      "I love my kids more than my own sanity — but that doesn’t mean I haven’t fantasized about dropping them off at the fire station on the hard days."
   },
   {
-    slug: "post-softness-starting-over.html",
-    title: "The Softness in Starting Over",
-    tag: "Self",
+    slug: "our-vegas-wedding-day.html",
+    title: "Our Vegas Wedding Day: Chaos, Nerves, and So Much Love",
+    tag: "Love & Marriage",
+    date: "2025-11-12",
     snippet:
-      "Starting over isn’t always dramatic. Sometimes it’s quiet, shaky decisions that no one claps for — but they quietly change everything."
-  },
-  {
-    slug: "post-burn-it-down.html",
-    title: "Burn It Down: When Your Old Life Doesn’t Fit Anymore",
-    tag: "Life",
-    snippet:
-      "Letting go of a life you built when you were just trying to survive — and choosing to build something truer."
+      "Exhausted, stressed, low-key panicking about everything going wrong — and somehow it still turned into the most perfect, intimate dark fairytale."
   }
+  // 👉 Add more posts here as you create new HTML files.
+  // {
+  //   slug: "your-new-post-file.html",
+  //   title: "Your New Post Title",
+  //   tag: "Category / Tag",
+  //   date: "2025-12-01",
+  //   snippet: "Short, spicy summary of the chaos in this post."
+  // },
 ];
 
-// ===== STORE PRODUCTS =====
-// url:
-//   - use your Printful/Printify/checkout/product link
-//   - or "#" for coming soon
-const PRODUCTS = [
-  // LIVE PRODUCTS
-  {
-    title: "Running on Trauma and Caffeine – Gothic Mug (15oz)",
-    tag: "Drinkware",
-    price: "$28",
-    description:
-      "Full-wrap gothic mug with ornate lettering and a soft smoky background — for witches, moms, students, and anyone running on trauma and caffeine.",
-    url: "https://laurelsorganizedchaos.printful.me/product/running-on-trauma-and-caffeine-gothic-mug-15oz-wrap",
-    ctaLabel: "Buy Now"
-  },
-  {
-    title: "Witchy Mom Chaos Tote – All-Over Print (15×15)",
-    tag: "Tote Bags",
-    price: "$34",
-    description:
-      "All-over print witchy mom tote covered in sarcastic quotes, crows, swirling chaos clouds, and dark feminine energy. Perfect for errands, witchcraft, and hauling tiny demon supplies.",
-    url: "https://laurelsorganizedchaos.printful.me/product/witchy-mom-chaos-tote",
-    ctaLabel: "Buy Now"
-  },
+// ========== UTILITIES ==========
 
-  // COMING SOON / FUTURE PRODUCTS
-  {
-    title: "“It’s Your Life” Gothic Art Print",
-    tag: "Digital Art",
-    price: "$12",
-    description:
-      "Dark feminine artwork featuring the quote “It’s your life, everyone else is just in it” — perfect for walls, desks, or altars of tired witches.",
-    url: "#",
-    ctaLabel: "Coming Soon"
-  },
-  {
-    title: "Chaos Diary: Shadow Work Journal",
-    tag: "Journals",
-    price: "$18",
-    description:
-      "A guided journal for brain dumps, shadow work, and late-night “what am I even doing?” sessions.",
-    url: "#",
-    ctaLabel: "Coming Soon"
-  },
-  {
-    title: "Witchy Wallpaper Pack",
-    tag: "Wallpapers",
-    price: "$9",
-    description:
-      "A set of witchy, dark feminine phone wallpapers so your lock screen matches your inner main-character chaos.",
-    url: "#",
-    ctaLabel: "Coming Soon"
-  },
-  {
-    title: "Dark Feminine Essentials Bundle",
-    tag: "Bundle",
-    price: "$27",
-    description:
-      "A curated bundle of prints, journal pages, and wallpapers to create one cohesive, haunting aesthetic.",
-    url: "#",
-    ctaLabel: "Coming Soon"
-  },
-  {
-    title: "Affirmations for Exhausted Witches (Digital)",
-    tag: "Other",
-    price: "$7",
-    description:
-      "Short, honest, slightly feral affirmations for the days when “love and light” just isn’t cutting it.",
-    url: "#",
-    ctaLabel: "Coming Soon"
-  }
-];
+/**
+ * Convert "2025-11-23" -> "Nov 23, 2025"
+ */
+function formatDate(isoDate) {
+  if (!isoDate) return "";
+  const date = new Date(isoDate + "T00:00:00");
+  if (Number.isNaN(date.getTime())) return isoDate;
 
-// ===== HELPERS =====
-
-// Render blog cards into a container
-function renderBlogCards(containerId, postsToRender) {
-  const container = document.getElementById(containerId);
-  if (!container) return;
-
-  const cardsHtml = postsToRender
-    .map(
-      (post) => `
-      <article class="card">
-        <p class="card-tag">${post.tag}</p>
-        <h4 class="card-title">${post.title}</h4>
-        <p class="card-snippet">
-          ${post.snippet}
-        </p>
-        <a href="${post.slug}" class="card-link">Read Post</a>
-      </article>
-    `
-    )
-    .join("");
-
-  container.innerHTML = cardsHtml;
-}
-
-// Render product cards into a container
-function renderProductCards(containerId, productsToRender) {
-  const container = document.getElementById(containerId);
-  if (!container) return;
-
-  const cardsHtml = productsToRender
-    .map((product) => {
-      const hasLink = product.url && product.url !== "#";
-      const actionHtml = hasLink
-        ? `<a href="${product.url}" class="card-link" target="_blank" rel="noopener noreferrer">${product.ctaLabel || "Buy Now"}</a>`
-        : `<button class="card-link" type="button" disabled>${product.ctaLabel || "Coming Soon"}</button>`;
-
-      return `
-        <article class="card product-card">
-          <p class="card-tag">${product.tag}</p>
-          <h4 class="card-title">${product.title}</h4>
-          <p class="card-snippet">
-            ${product.description}
-          </p>
-          <p class="product-price">${product.price}</p>
-          ${actionHtml}
-        </article>
-      `;
-    })
-    .join("");
-
-  container.innerHTML = cardsHtml;
-}
-
-// ===== PAGE INITIALIZATION =====
-document.addEventListener("DOMContentLoaded", () => {
-  // Home page: latest 3 posts
-  if (document.getElementById("latest-posts")) {
-    const latestThree = BLOG_POSTS.slice(0, 3);
-    renderBlogCards("latest-posts", latestThree);
-  }
-
-  // Blog page: all posts
-  if (document.getElementById("blog-posts")) {
-    renderBlogCards("blog-posts", BLOG_POSTS);
-  }
-
-  // Store page: all products
-  if (document.getElementById("store-products")) {
-    renderProductCards("store-products", PRODUCTS);
-  }
-});
-
+  return date.toLo
