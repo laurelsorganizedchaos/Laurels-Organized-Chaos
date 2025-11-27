@@ -2,186 +2,104 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Laurel's Organized Chaos | Home</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laurel’s Organized Chaos – Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Gothic heading font -->
-<link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <!-- Fantasy serif fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
 
-<!-- Clean body font -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="page">
+  <header class="site-header">
+    <div class="logo-text">Laurel’s Organized Chaos</div>
+    <nav class="nav-links">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="blog.html" data-nav="blog">Blog</a>
+      <a href="store.html" data-nav="store">Store</a>
+      <a href="about.html" data-nav="about">About</a>
+    </nav>
+  </header>
 
-    <!-- Header -->
-    <header class="site-header">
-      <div class="logo-area">
-        <span class="logo-mark">☽✧</span>
-        <div class="logo-text">
-          <h1>Laurel's Organized Chaos</h1>
-          <p class="tagline">spooky systems for a beautifully messy life</p>
-        </div>
-      </div>
+  <main class="page-wrapper">
+    <!-- HERO with gothic rune border -->
+    <section class="hero">
+      <div class="rune-frame">
+        <div class="rune-frame-side left">ᛉ ᛟ ᛞ ᛇ</div>
+        <div class="rune-frame-side right">ᛇ ᛞ ᛟ ᛉ</div>
 
-      <nav class="main-nav">
-        <a href="index.html" class="nav-link active">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="blog.html" class="nav-link">Blog</a>
-        <a href="store.html" class="nav-link">Store</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </nav>
-    </header>
+        <h1 class="hero-title">It’s My Life. Everyone Else Is Just In It.</h1>
+        <p class="hero-lead">
+          Dark humor, witch energy, mom chaos, college brain, and a business to build — all crammed
+          into one slightly sleep-deprived body wearing black leggings and eyeliner.
+        </p>
+        <p class="hero-sub">
+          If you’re here for perfectly curated influencer bullshit, you’re lost. If you’re here for
+          honest mess, witchy vibes, and trying again (and again), you’re home.
+        </p>
 
-    <main>
+        <div class="hero-row">
+          <!-- Crow silhouette badge -->
+          <div class="crow-badge" aria-hidden="true">
+            <svg viewBox="0 0 64 64">
+              <path d="M6 30c6-6 14-8 20-8 3-6 9-10 16-10 6 0 10 2 13 6-4 0-7 1-10 3 4 1 7 3 9 6-4 0-7 1-9 2l6 6c1 1 1 3-1 3h-5l4 8c1 2-1 4-3 3l-9-5-7 4c-2 1-4 0-4-2l1-7-6-5-8 3c-2 1-4-1-3-3l4-8-4-1z"/>
+            </svg>
+          </div>
 
-      <!-- Hero -->
-      <section class="hero">
-        <div class="hero-text">
-          <p class="hero-overline">Hi, I'm Laurel.</p>
-          <h2>It’s your life. Everyone else is just in it.</h2>
-          <p class="hero-body">
-            I’m a goth-leaning, chaos-juggling mom and student, turning burnout,
-            breakdowns, and dark humor into a lifestyle brand that helps messy
-            humans feel seen — and maybe even a little powerful.
-          </p>
+          <!-- Custom SVG flourish + note -->
+          <div style="flex:1; min-width:220px;">
+            <svg viewBox="0 0 220 60" width="100%" height="60">
+              <defs>
+                <linearGradient id="flourishGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#ff3e9e"/>
+                  <stop offset="50%" stop-color="#bb6bff"/>
+                  <stop offset="100%" stop-color="#4fd8ff"/>
+                </linearGradient>
+              </defs>
+              <path d="M5 30 Q55 5 110 30 T215 30"
+                    stroke="url(#flourishGrad)" stroke-width="1.4" fill="none" />
+              <circle cx="110" cy="30" r="3" fill="#f5f1ff" />
+              <path d="M110 15 L114 23 L106 23 Z" fill="#ff3e9e" />
+              <path d="M110 45 L114 37 L106 37 Z" fill="#4fd8ff" />
+            </svg>
 
-          <div class="hero-actions">
-            <a href="store.html" class="btn btn-coffin"><span>Shop the Chaos</span></a>
-            <a href="blog.html" class="btn btn-ghost"><span>Read the Chaos Diaries</span></a>
-            <a href="about.html" class="btn btn-outline"><span>About Laurel</span></a>
+            <p class="hero-note">
+              Currently balancing: tiny humans, therapy, assignments, wedding memories, business
+              planning, and the urge to hex anyone who talks shit about my husband without knowing him.
+            </p>
           </div>
         </div>
+      </div>
+    </section>
 
-        <aside class="hero-card">
-          <p class="hero-card-title">Today’s vibe:</p>
-          <p class="hero-card-quote">
-            “Get your ass up, babe. The chaos won’t organize itself.”
-          </p>
-          <p class="hero-card-note">– Laurel’s Organized Chaos</p>
-        </aside>
-      </section>
+    <!-- Blood-drip divider -->
+    <div class="divider-blood" aria-hidden="true">
+      <div class="divider-blood-line"></div>
+      <div class="drip d1"></div>
+      <div class="drip d2"></div>
+      <div class="drip d3"></div>
+    </div>
 
-      <!-- What is Laurel's Organized Chaos -->
-      <section class="section">
-        <h3 class="section-title">What is Laurel’s Organized Chaos?</h3>
-        <p class="section-text">
-          A darkly whimsical blend of witchy aesthetic, honest storytelling, and
-          chaotic beauty. I’ve rebuilt my life more times than I can count through
-          motherhood, school, survival, and healing. This space is where I turn that
-          journey into creativity, products, and real talk — for anyone who feels like
-          their life is equal parts magic and mess.
-        </p>
-      </section>
+    <!-- Tarot-style latest posts (auto-filled by JS) -->
+    <section>
+      <div class="section-heading">
+        <h2>Latest Chaos</h2>
+        <small>Three pulls from the deck of my actual life.</small>
+      </div>
 
-      <!-- Pillars -->
-      <section class="section">
-        <h3 class="section-title">Pillars of the Chaos</h3>
+      <div id="latest-chaos-grid" class="tarot-grid"></div>
+    </section>
+  </main>
 
-        <div class="card-grid pillars-grid">
-          <article class="card">
-            <p class="card-tag">Self</p>
-            <h4 class="card-title">Rebuilding, Always</h4>
-            <p class="card-snippet">
-              Healing, learning, and trying again — without pretending your story
-              is supposed to be perfect.
-            </p>
-          </article>
-
-          <article class="card">
-            <p class="card-tag">Mom Life</p>
-            <h4 class="card-title">Motherhood, But Real</h4>
-            <p class="card-snippet">
-              Honest, raw, and witchy reflections on raising tiny humans while
-              trying to stay sane.
-            </p>
-          </article>
-
-          <article class="card">
-            <p class="card-tag">Aesthetic</p>
-            <h4 class="card-title">Gothic, Witchy Beauty</h4>
-            <p class="card-snippet">
-              Darkness, softness, femininity, and a little magic woven into
-              everything I create.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <!-- Latest Blog Posts -->
-      <section class="section">
-        <div class="section-header-row">
-          <h3 class="section-title">Latest from the Blog</h3>
-          <a href="blog.html" class="section-link">Read all posts →</a>
-        </div>
-
-        <div id="latest-posts" class="card-grid">
-          <!-- Cards injected via script.js -->
-        </div>
-      </section>
-
-      <!-- Featured Store -->
-      <section class="section">
-        <div class="section-header-row">
-          <h3 class="section-title">Featured from the Store</h3>
-          <a href="store.html" class="section-link">View all products →</a>
-        </div>
-
-        <div class="card-grid">
-
-          <article class="card product-card">
-            <p class="card-tag">Drinkware</p>
-            <h4 class="card-title">Trauma & Caffeine Mug</h4>
-            <p class="card-snippet">
-              Full-wrap gothic mug for exhausted witches, moms, and chaotic humans.
-            </p>
-            <a class="card-link" href="https://laurelsorganizedchaos.printful.me/product/running-on-trauma-and-caffeine-gothic-mug-15oz-wrap"
-               target="_blank" rel="noopener noreferrer">Buy Now</a>
-          </article>
-
-          <article class="card product-card">
-            <p class="card-tag">Totes</p>
-            <h4 class="card-title">Witchy Mom Chaos Tote</h4>
-            <p class="card-snippet">
-              A full-print tote covered in sarcastic quotes, crows, and witchy chaos.
-            </p>
-            <a class="card-link" href="https://laurelsorganizedchaos.printful.me/product/witchy-mom-chaos-tote"
-               target="_blank" rel="noopener noreferrer">Buy Now</a>
-          </article>
-
-          <article class="card product-card">
-            <p class="card-tag">Home</p>
-            <h4 class="card-title">Coming Soon</h4>
-            <p class="card-snippet">
-              More chaos, more magic, and more dark feminine creations are on the way.
-            </p>
-            <button class="card-link" disabled>Coming Soon</button>
-          </article>
-
-        </div>
-      </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-      <p>© <span id="year"></span> Laurel's Organized Chaos · It’s your life, everyone else is just in it.</p>
-    </footer>
-
+  <!-- Animated neon witch sigil -->
+  <div class="sigil" aria-hidden="true">
+    <div class="sigil-ring"></div>
+    <div class="sigil-core"></div>
   </div>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-  <script src="script.js"></script>
+  <footer class="site-footer">
+    © 2025 Laurel’s Organized Chaos · Goth mom, glowing runes, organized disaster.
+  </footer>
 </body>
 </html>
-
