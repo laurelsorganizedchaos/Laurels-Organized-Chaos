@@ -20,6 +20,8 @@ const POSTS = [
     snippet:
       "When your husband isn’t welcome, neither are you or your kids — so you build your own Thanksgiving that’s drama-free, chaotic, and actually full of love."
   },
+
+  // ⭐ UPDATED FILE NAME
   {
     slug: "post-motherhood-without-the-mask.html",
     title: "Motherhood Without the Mask",
@@ -28,6 +30,8 @@ const POSTS = [
     snippet:
       "Yes, you would die for your kids. Yes, there are days you fantasize about silence. Both can be true, and it doesn’t make you a bad mom."
   },
+
+  // ⭐ UPDATED FILE NAME
   {
     slug: "post-wedding-day.html",
     title: "Our Vegas Wedding Day: Chaos, Nerves, and So Much Love",
@@ -37,7 +41,7 @@ const POSTS = [
       "Exhaustion, anxiety, and last-minute changes somehow turned into the most intimate, perfect dark fairytale on 11/11."
   },
 
-  // 🔮 NEW POSTS YOU ASKED TO ADD
+  // 🔮 Your three additional posts
   {
     slug: "post-organized-chaos.html",
     title: "Post-Organized Chaos: Systems That Actually Fit My Messy Life",
@@ -88,8 +92,7 @@ function getTarotSymbol(tag = "") {
   if (t.includes("mom") || t.includes("mother")) return "☾";
   if (t.includes("marriage") || t.includes("love")) return "🪶";
   if (t.includes("mental") || t.includes("healing")) return "☿";
-  if (t.includes("money") || t.includes("business")) return "♃";
-  if (t.includes("school") || t.includes("study")) return "✦";
+  if (t.includes("life") || t.includes("design")) return "✦";
   if (t.includes("shadow")) return "🩸";
   return "✶";
 }
@@ -174,4 +177,3 @@ document.addEventListener("DOMContentLoaded", () => {
   renderBlogList();
   highlightActiveNav();
 });
-
