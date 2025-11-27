@@ -5,167 +5,192 @@
   <title>Laurel's Organized Chaos | About</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Fantasy serif fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="page">
+  <header class="site-header">
+    <div>
+      <div class="logo-text">Laurel's Organized Chaos</div>
+      <div class="site-tagline">spooky systems for a beautifully messy life</div>
+    </div>
 
-    <!-- Header -->
-    <header class="site-header">
-      <div class="logo-area">
-        <span class="logo-mark">☽✧</span>
-        <div class="logo-text">
-          <h1>Laurel's Organized Chaos</h1>
-          <p class="tagline">spooky systems for a beautifully messy life</p>
-        </div>
-      </div>
+    <nav class="nav-links">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="blog.html" data-nav="blog">Blog</a>
+      <a href="store.html" data-nav="store">Store</a>
+      <a href="contact.html" data-nav="contact">Contact</a>
+    </nav>
+  </header>
 
-      <nav class="main-nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link active">About</a>
-        <a href="blog.html" class="nav-link">Blog</a>
-        <a href="store.html" class="nav-link">Store</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </nav>
-    </header>
+  <main class="page-wrapper">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="rune-frame">
+        <div class="rune-frame-side left">ᛉ ᛟ ᛞ ᛇ</div>
+        <div class="rune-frame-side right">ᛇ ᛞ ᛟ ᛉ</div>
 
-    <main>
-
-      <!-- Intro section -->
-      <section class="section">
-        <h2 class="section-title">Who the Hell is Laurel?</h2>
-        <p class="section-text">
-          I’m Laurel — a darkly-inclined, soft-hearted, stubbornly-surviving woman who has
-          had to rebuild her life more times than she can count. I’m a mom, a student,
-          a partner, a work-in-progress human, and the creator behind Laurel’s Organized Chaos.
+        <h1 class="hero-title">Who the Hell is Laurel?</h1>
+        <p class="hero-lead">
+          I’m Laurel — a darkly-inclined, soft-hearted, stubbornly-surviving woman who has had to
+          rebuild her life more times than she can count. I’m a mom, a student, a partner, a
+          work-in-progress human, and the creator behind Laurel’s Organized Chaos.
         </p>
-        <p class="section-text" style="margin-top: 0.8rem;">
+        <p class="hero-sub">
           My life has never looked “neat.” It’s been a mix of love, trauma, healing, tiny humans,
-          mental health rollercoasters, big dreams, and the kind of chaos you can’t always post
-          on social media. This space is where I take all of that and turn it into something
-          honest, witchy, and hopefully comforting for anyone who feels like they’re
-          simultaneously doing their best and falling apart.
+          mental health rollercoasters, big dreams, and the kind of chaos you can’t always post on
+          social media. This space is where I turn all of that into something honest, witchy, and
+          hopefully comforting for anyone who feels like they’re simultaneously doing their best
+          and falling apart.
         </p>
-      </section>
+      </div>
+    </section>
 
-      <!-- Story / journey -->
-      <section class="section">
-        <h3 class="section-title">A Life Built, Burned Down, and Built Again</h3>
-        <p class="section-text">
-          My story isn’t a straight line — it’s more like a messy spiral with sharp turns,
-          hard resets, and “okay, plot twist” moments. I’ve been the girl who tried to do
-          everything the “right” way, the woman who watched it all fall apart, and the person
-          who decided to rebuild anyway, even when it felt impossible.
-        </p>
+    <!-- Blood-drip divider -->
+    <div class="divider-blood" aria-hidden="true">
+      <div class="divider-blood-line"></div>
+      <div class="drip d1"></div>
+      <div class="drip d2"></div>
+      <div class="drip d3"></div>
+    </div>
 
-        <div class="card-grid">
-          <article class="card">
-            <p class="card-tag">Chapter One</p>
-            <h4 class="card-title">Learning Survival</h4>
-            <p class="card-snippet">
-              I learned early how to survive more than I was ever taught how to rest. My
-              nervous system has seen some things. For a long time, life was about
-              getting through the day, not dreaming about the future.
-            </p>
-          </article>
+    <!-- Story / journey -->
+    <section>
+      <h2>A Life Built, Burned Down, and Built Again</h2>
+      <p>
+        My story isn’t a straight line — it’s more like a messy spiral with sharp turns,
+        hard resets, and “okay, plot twist” moments. I’ve been the girl who tried to do
+        everything the “right” way, the woman who watched it all fall apart, and the person
+        who decided to rebuild anyway, even when it felt impossible.
+      </p>
 
-          <article class="card">
-            <p class="card-tag">Chapter Two</p>
-            <h4 class="card-title">Motherhood & Mess</h4>
-            <p class="card-snippet">
-              Becoming a mom didn’t magically make life easier or more organized. It made
-              love deeper, sleep shorter, and everything louder. I had to figure out how to
-              care for tiny humans while still trying to figure out who I am.
-            </p>
-          </article>
+      <div class="tarot-grid">
+        <article class="tarot-card">
+          <div class="tarot-label-top">Chapter One</div>
+          <div class="tarot-symbol">✦</div>
+          <h3 class="tarot-title">Learning Survival</h3>
+          <p class="tarot-text">
+            I learned early how to survive more than I was ever taught how to rest. My nervous system
+            has seen some things. For a long time, life was about getting through the day, not
+            dreaming about the future.
+          </p>
+          <div class="tarot-meta">Foundation · Hypervigilance · Grit</div>
+          <div class="tarot-label-bottom">Origin Story</div>
+        </article>
 
-          <article class="card">
-            <p class="card-tag">Chapter Three</p>
-            <h4 class="card-title">Rebuilding on Purpose</h4>
-            <p class="card-snippet">
-              Therapy, school, hard conversations, and a lot of nights wondering who I
-              want to become next. Laurel’s Organized Chaos was born from that place —
-              the decision to build a life that makes sense for me, not for anyone else.
-            </p>
-          </article>
-        </div>
-      </section>
+        <article class="tarot-card">
+          <div class="tarot-label-top">Chapter Two</div>
+          <div class="tarot-symbol">☾</div>
+          <h3 class="tarot-title">Motherhood &amp; Mess</h3>
+          <p class="tarot-text">
+            Becoming a mom didn’t magically make life easier or more organized. It made love deeper,
+            sleep shorter, and everything louder. I had to figure out how to care for tiny humans
+            while still trying to figure out who I am.
+          </p>
+          <div class="tarot-meta">Love · Overwhelm · Growth</div>
+          <div class="tarot-label-bottom">Mom Life</div>
+        </article>
 
-      <!-- What "Organized Chaos" means -->
-      <section class="section">
-        <h3 class="section-title">What “Organized Chaos” Means to Me</h3>
-        <p class="section-text">
-          “Organized Chaos” isn’t about pretending everything is fine, color-coding your soul,
-          or forcing yourself into a routine that was never meant for you. It’s about accepting
-          that your life might always be a little wild — and choosing to build systems, rituals,
-          and beauty inside that reality instead of waiting for a “perfect” version of you to show up.
-        </p>
-        <p class="section-text" style="margin-top: 0.8rem;">
-          For me, that looks like mixing shadow work with sarcasm, aesthetics with honesty,
-          ambition with rest, and motherhood with a refusal to completely lose myself.
-          It’s gothic, emotional, practical, and just unhinged enough to feel real.
-        </p>
-      </section>
+        <article class="tarot-card">
+          <div class="tarot-label-top">Chapter Three</div>
+          <div class="tarot-symbol">🪶</div>
+          <h3 class="tarot-title">Rebuilding on Purpose</h3>
+          <p class="tarot-text">
+            Therapy, school, hard conversations, and a lot of nights wondering who I want to become
+            next. Laurel’s Organized Chaos was born from that place — the decision to build a life
+            that makes sense for me, not for anyone else.
+          </p>
+          <div class="tarot-meta">Intention · Healing · Rebirth</div>
+          <div class="tarot-label-bottom">New Chapter</div>
+        </article>
+      </div>
+    </section>
 
-      <!-- Values / promises -->
-      <section class="section">
-        <h3 class="section-title">What You’ll Always Find Here</h3>
+    <!-- What “Organized Chaos” means -->
+    <section>
+      <h2>What “Organized Chaos” Means to Me</h2>
+      <p>
+        “Organized Chaos” isn’t about pretending everything is fine, color-coding your soul, or
+        forcing yourself into a routine that was never meant for you. It’s about accepting that
+        your life might always be a little wild — and choosing to build systems, rituals, and beauty
+        inside that reality instead of waiting for a “perfect” version of you to show up.
+      </p>
+      <p>
+        For me, that looks like mixing shadow work with sarcasm, aesthetics with honesty, ambition
+        with rest, and motherhood with a refusal to completely lose myself. It’s gothic, emotional,
+        practical, and just unhinged enough to feel real.
+      </p>
+    </section>
 
-        <div class="card-grid">
-          <article class="card">
-            <p class="card-tag">Honesty</p>
-            <h4 class="card-title">No Perfect Persona</h4>
-            <p class="card-snippet">
-              I’m not here to pretend I have it all together. I’ll share the pretty parts,
-              the painful parts, and the in-between — without sugarcoating it.
-            </p>
-          </article>
+    <!-- Values / promises -->
+    <section>
+      <h2>What You’ll Always Find Here</h2>
 
-          <article class="card">
-            <p class="card-tag">Compassion</p>
-            <h4 class="card-title">You’re Not “Too Much”</h4>
-            <p class="card-snippet">
-              Mental health, trauma, neurospicy brains, burnout — you’re not broken or lazy
-              for struggling. Your nervous system isn’t a personality flaw.
-            </p>
-          </article>
+      <div class="tarot-grid">
+        <article class="tarot-card">
+          <div class="tarot-label-top">Honesty</div>
+          <div class="tarot-symbol">🩸</div>
+          <h3 class="tarot-title">No Perfect Persona</h3>
+          <p class="tarot-text">
+            I’m not here to pretend I have it all together. I’ll share the pretty parts, the painful
+            parts, and the in-between — without sugarcoating it.
+          </p>
+          <div class="tarot-meta">Raw · Real · Unfiltered</div>
+          <div class="tarot-label-bottom">No Masks</div>
+        </article>
 
-          <article class="card">
-            <p class="card-tag">Magic</p>
-            <h4 class="card-title">Witchy, Dark, and Soft</h4>
-            <p class="card-snippet">
-              Gothic, witchy, feminine energy threads through everything I make — from words
-              to visuals to the way I see growth: like alchemy born from chaos.
-            </p>
-          </article>
-        </div>
-      </section>
+        <article class="tarot-card">
+          <div class="tarot-label-top">Compassion</div>
+          <div class="tarot-symbol">☿</div>
+          <h3 class="tarot-title">You’re Not “Too Much”</h3>
+          <p class="tarot-text">
+            Mental health, trauma, neurospicy brains, burnout — you’re not broken or lazy for
+            struggling. Your nervous system isn’t a personality flaw.
+          </p>
+          <div class="tarot-meta">Understanding · Safety · Grace</div>
+          <div class="tarot-label-bottom">You Belong</div>
+        </article>
 
-      <!-- Fun facts / softer side -->
-      <section class="section">
-        <h3 class="section-title">A Few Things About Me</h3>
-        <ul class="section-text" style="list-style: disc; padding-left: 1.2rem; margin-top: 0.1rem;">
-          <li>I live a life that’s part circus, part haunted house, and part cozy nest.</li>
-          <li>I’m a full-time student, juggling assignments with snacks, naps, and mini-crises.</li>
-          <li>I take my mental health seriously and still use dark humor to survive it.</li>
-          <li>My aesthetic is: cute goth, soft witch, emotionally exhausted but trying.</li>
-          <li>I deeply believe that starting over is not failure — it’s survival and courage.</li>
-        </ul>
-      </section>
+        <article class="tarot-card">
+          <div class="tarot-label-top">Magic</div>
+          <div class="tarot-symbol">✶</div>
+          <h3 class="tarot-title">Witchy, Dark, and Soft</h3>
+          <p class="tarot-text">
+            Gothic, witchy, feminine energy threads through everything I make — from words to visuals
+            to the way I see growth: like alchemy born from chaos.
+          </p>
+          <div class="tarot-meta">Ritual · Aesthetic · Alchemy</div>
+          <div class="tarot-label-bottom">Soft Witch Vibes</div>
+        </article>
+      </div>
+    </section>
 
-    </main>
+    <!-- Fun facts -->
+    <section>
+      <h2>A Few Things About Me</h2>
+      <ul style="list-style: disc; padding-left: 1.4rem; margin-top: 0.4rem;">
+        <li>I live a life that’s part circus, part haunted house, and part cozy nest.</li>
+        <li>I’m a full-time student, juggling assignments with snacks, naps, and mini-crises.</li>
+        <li>I take my mental health seriously and still use dark humor to survive it.</li>
+        <li>My aesthetic is: cute goth, soft witch, emotionally exhausted but trying.</li>
+        <li>I deeply believe that starting over is not failure — it’s survival and courage.</li>
+      </ul>
+    </section>
+  </main>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-      <p>© <span id="year"></span> Laurel's Organized Chaos · It’s your life, everyone else is just in it.</p>
-    </footer>
-
+  <!-- Animated neon witch sigil -->
+  <div class="sigil" aria-hidden="true">
+    <div class="sigil-ring"></div>
+    <div class="sigil-core"></div>
   </div>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Laurel's Organized Chaos · Chaos, but make it witchy.</p>
+  </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
