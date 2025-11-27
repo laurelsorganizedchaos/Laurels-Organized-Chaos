@@ -365,6 +365,24 @@ main {
   flex-direction: column;
   align-items: stretch;
 }
+/* PRODUCT IMAGE SIZING FIX */
+.product-image {
+  width: 100%;
+  height: 220px; /* uniform height for all product images */
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+  border: 1px solid rgba(244, 239, 255, 0.35);
+  background: #0d0715; /* fallback dark bg */
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* fills area without distortion */
+  object-position: center; /* keeps important parts centered */
+  display: block;
+}
 
 .tarot-card::before {
   content: "";
@@ -573,4 +591,5 @@ textarea {
     margin-bottom: 0.4rem;
   }
 }
+
 
