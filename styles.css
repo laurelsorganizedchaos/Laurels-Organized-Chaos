@@ -116,6 +116,20 @@ a:hover {
   text-shadow: var(--glow-pink);
 }
 
+/* tagline under logo (used on home/about) */
+.site-tagline {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+}
+
+/* nav container */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
 .nav-links a {
   margin-left: 1rem;
   padding: 0.4rem 0.9rem;
@@ -341,155 +355,4 @@ a:hover {
 
 .tarot-label-top,
 .tarot-label-bottom {
-  font-family: "Cinzel Decorative", serif;
-  font-size: 0.8rem;
-  letter-spacing: 0.35em;
-  text-align: center;
-  text-transform: uppercase;
-  color: rgba(245, 241, 255, 0.8);
-}
-
-.tarot-label-bottom {
-  margin-top: auto;
-  padding-top: 0.5rem;
-}
-
-.tarot-symbol {
-  text-align: center;
-  font-size: 1.5rem;
-  margin: 0.5rem 0 0.8rem;
-  text-shadow: var(--glow-purple);
-}
-
-.tarot-title {
-  text-align: center;
-  font-size: 1.1rem;
-  margin: 0.4rem 0 0.5rem;
-}
-
-.tarot-title a {
-  color: var(--text-main);
-}
-
-.tarot-title a:hover {
-  color: var(--accent-blue);
-}
-
-.tarot-text {
-  font-size: 0.98rem;
-  text-align: center;
-  color: var(--text-main);
-  padding: 0 0.4rem;
-}
-
-.tarot-meta {
-  font-size: 0.8rem;
-  text-align: center;
-  color: var(--text-muted);
-  margin-top: 0.4rem;
-}
-
-/* Animated neon sigil */
-.sigil {
-  position: fixed;
-  bottom: 32px;
-  right: 24px;
-  width: 120px;
-  height: 120px;
-  border-radius: 999px;
-  border: 1px solid rgba(248, 244, 255, 0.7);
-  background: radial-gradient(circle, rgba(25, 8, 45, 0.9), #050307);
-  box-shadow:
-    0 0 18px rgba(187, 107, 255, 0.9),
-    0 0 32px rgba(79, 216, 255, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  pointer-events: none;
-  opacity: 0.9;
-}
-
-.sigil-ring {
-  position: absolute;
-  width: 82px;
-  height: 82px;
-  border-radius: 999px;
-  border: 1px dashed rgba(244, 239, 255, 0.7);
-  animation: spin 20s linear infinite;
-}
-
-.sigil-ring::before,
-.sigil-ring::after {
-  content: "✶ ☽ ☿ ♀ ☉ ♂ ♄";
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  font-size: 0.55rem;
-  letter-spacing: 0.35em;
-  color: rgba(248, 244, 255, 0.8);
-  text-shadow: var(--glow-purple);
-}
-
-.sigil-ring::before { top: -8px; }
-.sigil-ring::after { bottom: -8px; transform: scaleX(-1); }
-
-.sigil-core {
-  position: relative;
-  width: 36px;
-  height: 36px;
-  border-radius: 999px;
-  background: radial-gradient(circle, var(--accent-purple), transparent);
-  box-shadow:
-    0 0 18px rgba(187, 107, 255, 0.95),
-    0 0 28px rgba(255, 62, 158, 0.8);
-  animation: pulse 3.4s ease-in-out infinite;
-}
-
-.sigil-core::before,
-.sigil-core::after {
-  content: "";
-  position: absolute;
-  inset: 8px;
-  border-radius: 4px;
-  border: 1px solid rgba(248, 244, 255, 0.8);
-  transform: rotate(45deg);
-}
-
-.sigil-core::after {
-  transform: rotate(-45deg);
-}
-
-@keyframes pulse {
-  0%,100% { transform: scale(0.9); opacity: 0.85; }
-  50% { transform: scale(1.05); opacity: 1; }
-}
-
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-/* FOOTER */
-.site-footer {
-  margin-top: 3.5rem;
-  padding: 1.7rem;
-  border-top: 1px solid var(--border-subtle);
-  text-align: center;
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  background: rgba(6, 3, 12, 0.96);
-}
-
-/* Responsive tweaks */
-@media (max-width: 720px) {
-  .rune-frame {
-    padding: 2rem 1.4rem 2.2rem;
-  }
-  .rune-frame-side { display: none; }
-  .sigil { transform: scale(0.8); right: 10px; bottom: 16px; }
-  .section-heading {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
+  font-family: "Cinzel Decorative", serif
