@@ -6,8 +6,8 @@
 console.log("🔥 Laurel's Organized Chaos script loaded.");
 
 // If your post files live in a subfolder, change this:
-// ""            -> posts next to index.html / blog.html
-// "blog/"       -> posts are in /blog/ folder
+// ""       -> posts next to index.html / blog.html
+// "blog/"  -> posts are in /blog/ folder
 const BLOG_BASE_PATH = "";
 
 // Master post list – add new posts here
@@ -136,7 +136,11 @@ function highlightActiveNav() {
 
     const isHome =
       key === "home" && (path.endsWith("/") || path.endsWith("index.html"));
-    const match = path.endsWith(href) || path.includes(href) || isHome;
+
+    const match =
+      path.endsWith(href) ||
+      path.includes("/" + href) ||
+      isHome;
 
     if (match) {
       link.classList.add("nav-active");
