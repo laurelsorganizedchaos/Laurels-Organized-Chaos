@@ -591,5 +591,15 @@ textarea {
     margin-bottom: 0.4rem;
   }
 }
+/* Small blog images for posts */
+.blog-img-sm {
+  display: block;
+  max-width: 38%;
+  margin: 1.4rem auto;
+  border-radius: 1rem;
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 0 14px rgba(187, 107, 255, 0.35);
+}
+
 
 
