@@ -21,7 +21,7 @@ const POSTS = [
       "When your husband isn’t welcome, neither are you or your kids — so you build your own Thanksgiving that’s drama-free, chaotic, and actually full of love."
   },
   {
-    slug: "motherhood-without-the-mask.html",
+    slug: "post-motherhood-without-the-mask.html",
     title: "Motherhood Without the Mask",
     tag: "Motherhood",
     date: "2025-11-10",
@@ -29,7 +29,7 @@ const POSTS = [
       "Yes, you would die for your kids. Yes, there are days you fantasize about silence. Both can be true, and it doesn’t make you a bad mom."
   },
   {
-    slug: "our-vegas-wedding-day.html",
+    slug: "post-wedding-day.html",
     title: "Our Vegas Wedding Day: Chaos, Nerves, and So Much Love",
     tag: "Love & Marriage",
     date: "2025-11-12",
@@ -155,3 +155,4 @@ document.addEventListener("DOMContentLoaded", () => {
   renderBlogList();
   highlightActiveNav();
 });
+
