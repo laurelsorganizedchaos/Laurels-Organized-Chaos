@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Laurel’s Organized Chaos – Store</title>
+  <title>Chaos Shop – Laurel’s Organized Chaos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Gothic fantasy fonts -->
@@ -12,10 +12,11 @@
   <script src="script.js" defer></script>
 </head>
 <body>
+  <!-- HEADER -->
   <header class="site-header">
     <div>
       <div class="logo-text">Laurel’s Organized Chaos</div>
-      <div class="site-tagline">digital chaos tools for witchy humans.</div>
+      <div class="site-tagline">Digital chaos tools & witchy merch.</div>
     </div>
 
     <nav class="nav-links">
@@ -40,13 +41,13 @@
           even when everything is on fire.
         </p>
         <p class="hero-sub">
-          All items below are fulfilled through Printful — you click, they print, and your chaos
-          gets some stylish backup.
+          These are the things I actually use and love — designed in my chaos, fulfilled by Printful,
+          shipped straight to your lair.
         </p>
       </div>
     </section>
 
-    <!-- Blood-drip divider -->
+    <!-- Blood divider -->
     <div class="divider-blood" aria-hidden="true">
       <div class="divider-blood-line"></div>
       <div class="drip d1"></div>
@@ -54,121 +55,15 @@
       <div class="drip d3"></div>
     </div>
 
-    <!-- PRINTFUL ITEMS GRID -->
+    <!-- PRODUCTS GRID (AUTO-FILLED VIA JS / PRODUCTS ARRAY) -->
     <section>
       <div class="section-heading">
         <h2>Featured Chaos Tools</h2>
-        <small>These link directly to my Printful products.</small>
+        <small>Auto-generated from my current Printful lineup.</small>
       </div>
 
-      <div class="tarot-grid">
-
-        <!-- ITEM 1 – Anti-Stupid Gothic Blanket -->
-        <article class="tarot-card">
-          <div class="tarot-label-top">Blanket</div>
-          <div class="tarot-symbol">✶</div>
-          <div class="product-image">
-            <img src="images/antisocialblanket.webp" alt="Gothic blanket that reads 'I'm not antisocial, I'm anti-stupid' with crows, candle, and crystals." />
-          </div>
-          <h3 class="tarot-title">
-            <a href="#"
-               target="_blank" rel="noopener">
-              “I’m Not Antisocial, I’m Anti-Stupid” Gothic Blanket
-            </a>
-          </h3>
-          <p class="tarot-text">
-            Curl up under something that matches your soul: cozy, dark, and done with everyone’s nonsense.
-          </p>
-          <div class="tarot-meta">Printful · Throw Blanket</div>
-          <div class="tarot-label-bottom">Wrap in chaos</div>
-        </article>
-
-        <!-- ITEM 2 – Gothic Anti-Stupid Tote -->
-        <article class="tarot-card">
-          <div class="tarot-label-top">Tote Bag</div>
-          <div class="tarot-symbol">✶</div>
-          <div class="product-image">
-            <img src="images/antisocialtote.webp" alt="Gothic tote bag with crows, candle, and pink text that reads 'I'm not antisocial, I'm anti-stupid'." />
-          </div>
-          <h3 class="tarot-title">
-            <a href="https://laurelsorganizedchaos.printful.me/product/gothic-im-not-antisocial-im-anti-stupid-tote-bag"
-               target="_blank" rel="noopener">
-              “I’m Not Antisocial, I’m Anti-Stupid” Gothic Tote
-            </a>
-          </h3>
-          <p class="tarot-text">
-            For errands, appointments, and school runs where you’re over-stimulated by people and
-            underwhelmed by their intelligence. Cute goth, brutally honest.
-          </p>
-          <div class="tarot-meta">Printful · Tote Bag</div>
-          <div class="tarot-label-bottom">Carry the boundary</div>
-        </article>
-
-        <!-- ITEM 3 – Gothic Anti-Stupid Apparel -->
-        <article class="tarot-card">
-          <div class="tarot-label-top">Apparel</div>
-          <div class="tarot-symbol">🩸</div>
-          <!-- (optional) reuse the tote image or add a separate shirt mockup later -->
-          <div class="product-image">
-            <img src="images/antisocialtote.webp" alt="Gothic design reading 'I'm not antisocial, I'm anti-stupid' with crows and candle." />
-          </div>
-          <h3 class="tarot-title">
-            <a href="https://laurelsorganizedchaos.printful.me/product/gothic-im-not-antisocial-im-anti-stupid"
-               target="_blank" rel="noopener">
-              “I’m Not Antisocial, I’m Anti-Stupid” Gothic Apparel
-            </a>
-          </h3>
-          <p class="tarot-text">
-            For the days when small talk feels like a personal attack. Let your shirt say what your
-            face already is.
-          </p>
-          <div class="tarot-meta">Printful · Tee / Hoodie options</div>
-          <div class="tarot-label-bottom">Wear the attitude</div>
-        </article>
-
-        <!-- ITEM 4 – Witchy Mom Chaos Tote -->
-        <article class="tarot-card">
-          <div class="tarot-label-top">Tote Bag</div>
-          <div class="tarot-symbol">☾</div>
-          <div class="product-image">
-            <img src="images/witchmomtote.webp" alt="Tote bag with witchy mom chaos illustration and dark humor wording." />
-          </div>
-          <h3 class="tarot-title">
-            <a href="https://laurelsorganizedchaos.printful.me/product/witchy-mom-chaos-tote"
-               target="_blank" rel="noopener">
-              Witchy Mom Chaos Tote
-            </a>
-          </h3>
-          <p class="tarot-text">
-            Diapers, snacks, crystals, receipts, and emergency caffeine cash — all in one very
-            witchy, very honest mom bag.
-          </p>
-          <div class="tarot-meta">Printful · Tote Bag</div>
-          <div class="tarot-label-bottom">Haul the chaos</div>
-        </article>
-
-        <!-- ITEM 5 – Trauma & Caffeine Mug -->
-        <article class="tarot-card">
-          <div class="tarot-label-top">Mug</div>
-          <div class="tarot-symbol">♄</div>
-          <div class="product-image">
-            <img src="images/traumamug.webp" alt="Black gothic mug that says 'Running on Trauma and Caffeine' in white script." />
-          </div>
-          <h3 class="tarot-title">
-            <a href="https://laurelsorganizedchaos.printful.me/product/running-on-trauma-and-caffeine-gothic-mug-15oz-wrap"
-               target="_blank" rel="noopener">
-              “Running on Trauma &amp; Caffeine” Gothic Mug (15oz Wrap)
-            </a>
-          </h3>
-          <p class="tarot-text">
-            For mornings when your nervous system is tired, your kids are loud, and coffee is the
-            only thing keeping you in this dimension.
-          </p>
-          <div class="tarot-meta">Printful · 15oz Mug</div>
-          <div class="tarot-label-bottom">Sip the spell</div>
-        </article>
-
-      </div>
+      <!-- JS (script.js) will inject all products here using PRODUCTS + productCardHTML -->
+      <div id="store-products-grid" class="tarot-grid"></div>
     </section>
 
     <!-- Link to full Printful storefront -->
@@ -196,5 +91,19 @@
   <footer class="site-footer">
     © 2025 Laurel’s Organized Chaos · Chaos, but make it witchy.
   </footer>
+
+  <!-- Page-specific JS to render store products -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const container = document.querySelector("#store-products-grid");
+      if (!container || typeof PRODUCTS === "undefined" || typeof productCardHTML === "undefined") return;
+
+      const sorted = [...PRODUCTS].sort(
+        (a, b) => new Date(b.date) - new Date(a.date)
+      );
+
+      container.innerHTML = sorted.map(productCardHTML).join("");
+    });
+  </script>
 </body>
 </html>
