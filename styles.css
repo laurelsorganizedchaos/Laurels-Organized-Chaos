@@ -1,19 +1,29 @@
+/* ============================================================
+   Laurel’s Organized Chaos – Full Gothic UI Stylesheet
+   Dark theme • Neon accents • Witchy runes • Tarot cards
+   ============================================================ */
+
 :root {
   --bg-main: #050307;
   --bg-alt: #0c0713;
   --bg-soft: #15101f;
+
   --accent-pink: #ff3e9e;
   --accent-purple: #bb6bff;
   --accent-blue: #4fd8ff;
   --blood-red: #b3132f;
+
   --text-main: #f5f1ff;
   --text-muted: #a49abf;
-  --border-subtle: rgba(255, 255, 255, 0.14);
-  --card-border: rgba(241, 229, 255, 0.7);
+
+  --border-subtle: rgba(255,255,255,0.14);
+  --card-border: rgba(241,229,255,0.7);
+
   --glow-purple: 0 0 18px rgba(187, 107, 255, 0.9);
   --glow-pink: 0 0 18px rgba(255, 62, 158, 0.9);
 }
 
+/* Reset + global */
 * {
   box-sizing: border-box;
 }
@@ -21,17 +31,17 @@
 body {
   margin: 0;
   font-family: "Cormorant Garamond", serif;
+  color: var(--text-main);
   background:
     radial-gradient(circle at top left, rgba(187, 107, 255, 0.24), transparent 60%),
     radial-gradient(circle at bottom right, rgba(79, 216, 255, 0.18), transparent 60%),
     radial-gradient(circle at center, rgba(10, 5, 25, 0.9), #050307);
-  color: var(--text-main);
   letter-spacing: 0.35px;
   overflow-x: hidden;
   position: relative;
 }
 
-/* Glowing mist overlay */
+/* Floating neon mist */
 body::before,
 body::after {
   content: "";
@@ -48,14 +58,12 @@ body::after {
 
 body::before {
   background: radial-gradient(circle, rgba(255, 62, 158, 0.85), transparent 70%);
-  top: -120px;
-  left: -80px;
+  top: -120px; left: -80px;
 }
 
 body::after {
   background: radial-gradient(circle, rgba(132, 94, 255, 0.85), transparent 70%);
-  bottom: -120px;
-  right: -60px;
+  bottom: -120px; right: -60px;
   animation-delay: -8s;
 }
 
@@ -64,16 +72,10 @@ body::after {
   100% { transform: translate(40px,-30px) scale(1.1); }
 }
 
-/* Typography basics */
 h1, h2, h3, h4, .logo-text {
   font-family: "Cinzel Decorative", serif;
   letter-spacing: 0.07em;
-  text-transform: none;
-  text-shadow: 0 0 16px rgba(187, 107, 255, 0.9);
-}
-
-p {
-  margin-top: 0;
+  text-shadow: 0 0 16px rgba(187,107,255,0.9);
 }
 
 a {
@@ -83,26 +85,25 @@ a {
 
 a:hover {
   color: var(--accent-blue);
-  text-shadow: 0 0 10px rgba(79, 216, 255, 0.9);
+  text-shadow: 0 0 10px rgba(79,216,255,0.9);
 }
 
-main {
-  min-height: 70vh;
-}
-
+/* Layout wrapper */
 .page-wrapper {
   max-width: 1100px;
   margin: 0 auto;
   padding: 2.5rem 1.4rem 5rem;
 }
 
-/* HEADER */
+/* ============================================================
+   HEADER
+   ============================================================ */
 .site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.1rem 1.5rem;
-  background: rgba(5, 3, 11, 0.9);
+  background: rgba(5,3,11,0.9);
   border-bottom: 1px solid var(--border-subtle);
   backdrop-filter: blur(16px);
   position: sticky;
@@ -125,19 +126,10 @@ main {
   text-shadow: var(--glow-pink);
 }
 
-/* tagline under logo */
 .site-tagline {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
-  margin-top: 0.1rem;
-}
-
-/* nav container */
-.nav-links {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  margin-top: -0.3rem;
 }
 
 .nav-links a {
@@ -145,7 +137,6 @@ main {
   padding: 0.4rem 0.9rem;
   border-radius: 999px;
   border: 1px solid transparent;
-  font-size: 1.05rem;
   color: var(--text-main);
 }
 
@@ -156,41 +147,16 @@ main {
   text-shadow: var(--glow-purple);
 }
 
-/* HERO / RUNE FRAME */
-.hero {
-  margin-top: 2.5rem;
-}
-
-.hero-title {
-  font-size: clamp(2.4rem, 3.4vw, 3.3rem);
-  margin: 0 0 0.8rem;
-}
-
-.hero-lead {
-  font-size: 1.25rem;
-  line-height: 1.6;
-  margin: 0.4rem 0 1.3rem;
-}
-
-.hero-sub {
-  font-size: 1.05rem;
-  color: var(--text-muted);
-}
-
-.hero-note {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  max-width: 360px;
-}
-
-/* Gothic rune border wrapper */
+/* ============================================================
+   RUNE FRAME WRAPPER
+   ============================================================ */
 .rune-frame {
   position: relative;
   border: 1px solid var(--card-border);
   border-radius: 1.8rem;
   padding: 2.4rem 2.1rem;
-  background: radial-gradient(circle at top, rgba(20, 10, 40, 0.96), rgba(5, 3, 15, 0.98));
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+  background: radial-gradient(circle at top, rgba(20,10,40,0.96), rgba(5,3,15,0.98));
+  box-shadow: 0 0 30px rgba(0,0,0,0.9);
   overflow: hidden;
 }
 
@@ -202,77 +168,92 @@ main {
   text-align: center;
   font-size: 0.7rem;
   letter-spacing: 0.35em;
-  color: rgba(244, 239, 255, 0.55);
+  color: rgba(244,239,255,0.55);
   text-shadow: var(--glow-purple);
   font-family: "Cinzel Decorative", serif;
 }
 
-.rune-frame::before {
-  top: 8px;
-}
-.rune-frame::after {
-  bottom: 8px;
-  transform: scaleX(-1);
+.rune-frame::before { top: 8px; }
+.rune-frame::after { bottom: 8px; transform: scaleX(-1); }
+
+/* ============================================================
+   BLOG POST STYLING (Universal)
+   ============================================================ */
+
+.blog-post {
+  max-width: 780px;
+  margin: 0 auto;
 }
 
-.rune-frame-side {
-  position: absolute;
-  top: 16%;
-  bottom: 16%;
-  width: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-size: 0.7rem;
-  letter-spacing: 0.4em;
-  color: rgba(244, 239, 255, 0.5);
-  writing-mode: vertical-rl;
-  text-shadow: var(--glow-purple);
+.blog-post h1 {
   font-family: "Cinzel Decorative", serif;
+  font-size: 2.1rem;
 }
 
-.rune-frame-side.left { left: 8px; }
-.rune-frame-side.right { right: 8px; }
+.post-meta {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 1.6rem;
+}
 
-/* Crow + flourish row */
-.hero-row {
+/* Small centered images */
+.blog-image {
+  margin: 1.6rem 0;
+  text-align: center;
+}
+
+.blog-image img {
+  display: block;
+  max-width: 60%;
+  margin: 0 auto;
+  border-radius: 1rem;
+  border: 1px solid rgba(255,255,255,0.22);
+  box-shadow: 0 0 14px rgba(187,107,255,0.4);
+}
+
+.blog-image figcaption {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+/* Grid of small images */
+.blog-image-grid {
   display: flex;
-  gap: 1rem;
-  margin-top: 1.8rem;
-  align-items: center;
   flex-wrap: wrap;
-}
-
-.crow-badge {
-  width: 78px;
-  height: 78px;
-  border-radius: 999px;
-  border: 1px solid var(--card-border);
-  background: radial-gradient(circle, #120815, #050307);
-  display: flex;
-  align-items: center;
+  gap: 1.2rem;
   justify-content: center;
-  box-shadow: 0 0 24px rgba(0, 0, 0, 0.8);
-  position: relative;
+  margin: 1.8rem 0;
 }
 
-.crow-badge svg {
-  width: 52px;
-  height: 52px;
-  fill: #f5f1ff;
-  filter: drop-shadow(0 0 10px rgba(245, 241, 255, 0.8));
+.blog-image-grid figure {
+  flex: 1 1 220px;
+  max-width: 280px;
+  text-align: center;
 }
 
-.crow-badge::after {
-  content: "🜁";
-  position: absolute;
-  bottom: -14px;
-  font-size: 1.1rem;
-  color: var(--accent-blue);
-  text-shadow: var(--glow-purple);
+.blog-image-grid img {
+  width: 100%;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(255,255,255,0.22);
+  box-shadow: 0 0 12px rgba(187,107,255,0.4);
 }
 
-/* Blood drip divider */
+.blog-image-grid figcaption {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 0.4rem;
+}
+
+@media (max-width: 600px) {
+  .blog-image img {
+    max-width: 90%;
+  }
+}
+
+/* ============================================================
+   BLOOD DRIP DIVIDER
+   ============================================================ */
 .divider-blood {
   position: relative;
   margin: 3rem 0 2.2rem;
@@ -281,12 +262,11 @@ main {
 
 .divider-blood-line {
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 0; right: 0;
   top: 10px;
   height: 3px;
   background: linear-gradient(90deg, transparent, var(--blood-red), transparent);
-  box-shadow: 0 0 12px rgba(179, 19, 47, 0.9);
+  box-shadow: 0 0 12px rgba(179,19,47,0.9);
 }
 
 .drip {
@@ -296,54 +276,19 @@ main {
   background: var(--blood-red);
   border-radius: 999px;
   top: 13px;
-  box-shadow: 0 0 8px rgba(179, 19, 47, 0.8);
-}
-
-.drip::after {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: -3px;
-  width: 15px;
-  height: 10px;
-  border-radius: 999px;
-  background: var(--blood-red);
 }
 
 .drip.d1 { left: 18%; }
 .drip.d2 { left: 52%; height: 22px; }
 .drip.d3 { left: 78%; height: 16px; }
 
-/* Section heading */
-.section-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1rem;
-}
-
-.section-heading small {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-}
-
-/* Tarot-card blog grid */
+/* ============================================================
+   TAROT CARD GRID (Blog + Home)
+   ============================================================ */
 .tarot-grid {
   display: grid;
   gap: 1.8rem;
   margin-top: 1.6rem;
-}
-.product-image {
-  border-radius: 1rem;
-  overflow: hidden;
-  margin-bottom: 0.8rem;
-  border: 1px solid rgba(244, 239, 255, 0.35);
-}
-
-.product-image img {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 @media (min-width: 768px) {
@@ -352,45 +297,21 @@ main {
   }
 }
 
-/* Tarot card */
 .tarot-card {
-  position: relative;
   background: radial-gradient(circle at top, #302040, #120918);
+  border: 1px solid var(--card-border);
   border-radius: 1.4rem;
   padding: 1.2rem 1rem 1.6rem;
-  border: 1px solid var(--card-border);
-  box-shadow: 0 0 28px rgba(0, 0, 0, 0.9);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-/* PRODUCT IMAGE SIZING FIX */
-.product-image {
-  width: 100%;
-  height: 220px; /* uniform height for all product images */
-  border-radius: 1rem;
-  overflow: hidden;
-  margin-bottom: 0.8rem;
-  border: 1px solid rgba(244, 239, 255, 0.35);
-  background: #0d0715; /* fallback dark bg */
-}
-
-.product-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;    /* fills area without distortion */
-  object-position: center; /* keeps important parts centered */
-  display: block;
+  box-shadow: 0 0 28px rgba(0,0,0,0.9);
+  position: relative;
 }
 
 .tarot-card::before {
   content: "";
   position: absolute;
   inset: 8px;
+  border: 1px dashed rgba(244,239,255,0.4);
   border-radius: 1rem;
-  border: 1px dashed rgba(244, 239, 255, 0.4);
-  pointer-events: none;
 }
 
 .tarot-label-top,
@@ -399,14 +320,10 @@ main {
   font-size: 0.8rem;
   letter-spacing: 0.35em;
   text-align: center;
-  text-transform: uppercase;
-  color: rgba(245, 241, 255, 0.8);
+  color: rgba(245,241,255,0.8);
 }
 
-.tarot-label-bottom {
-  margin-top: auto;
-  padding-top: 0.5rem;
-}
+.tarot-label-bottom { margin-top: auto; }
 
 .tarot-symbol {
   text-align: center;
@@ -417,135 +334,88 @@ main {
 
 .tarot-title {
   text-align: center;
-  font-size: 1.1rem;
   margin: 0.4rem 0 0.5rem;
 }
 
-.tarot-title a {
-  color: var(--text-main);
+.tarot-title a { color: var(--text-main); }
+
+/* ============================================================
+   STORE LISTING GRID
+   ============================================================ */
+.store-grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.tarot-title a:hover {
-  color: var(--accent-blue);
+@media (min-width: 768px) {
+  .store-grid {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
 }
 
-.tarot-text {
-  font-size: 0.98rem;
+.store-card {
+  background: radial-gradient(circle at top, #302040, #120918);
+  border-radius: 1.4rem;
+  border: 1px solid var(--card-border);
+  padding: 1.4rem;
+  box-shadow: 0 0 28px rgba(0,0,0,0.9);
   text-align: center;
-  color: var(--text-main);
-  padding: 0 0.4rem;
 }
 
-.tarot-meta {
-  font-size: 0.8rem;
-  text-align: center;
-  color: var(--text-muted);
-  margin-top: 0.4rem;
-}
-
-/* Article / post content layout (blog posts etc.) */
-article {
-  max-width: 720px;
-  margin: 0 auto;
-  font-size: 1.05rem;
-  line-height: 1.7;
-}
-
-article p {
+.store-card img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 0.8rem;
   margin-bottom: 1rem;
 }
 
-article ul {
-  margin: 0 0 1rem 1.4rem;
+.store-card h3 { margin-bottom: 0.3rem; }
+
+.store-card a.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  background: var(--accent-purple);
+  color: #fff;
 }
 
-/* generic stacked sections */
-main section + section {
-  margin-top: 3rem;
-}
-
-/* Contact form inputs (for contact.html if you remove inline styles later) */
-input[type="text"],
-input[type="email"],
-select,
-textarea {
-  font-family: "Cormorant Garamond", serif;
-}
-
-/* Animated neon sigil */
+/* ============================================================
+   NEON WITCH SIGIL
+   ============================================================ */
 .sigil {
   position: fixed;
-  bottom: 32px;
-  right: 24px;
-  width: 120px;
-  height: 120px;
+  bottom: 32px; right: 24px;
+  width: 120px; height: 120px;
   border-radius: 999px;
-  border: 1px solid rgba(248, 244, 255, 0.7);
-  background: radial-gradient(circle, rgba(25, 8, 45, 0.9), #050307);
+  border: 1px solid rgba(248,244,255,0.7);
+  background: radial-gradient(circle, rgba(25,8,45,0.9), #050307);
   box-shadow:
-    0 0 18px rgba(187, 107, 255, 0.9),
-    0 0 32px rgba(79, 216, 255, 0.7);
+    0 0 18px rgba(187,107,255,0.9),
+    0 0 32px rgba(79,216,255,0.7);
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   pointer-events: none;
-  opacity: 0.9;
 }
 
 .sigil-ring {
   position: absolute;
-  width: 82px;
-  height: 82px;
+  width: 82px; height: 82px;
   border-radius: 999px;
-  border: 1px dashed rgba(244, 239, 255, 0.7);
+  border: 1px dashed rgba(244,239,255,0.7);
   animation: spin 20s linear infinite;
 }
 
-.sigil-ring::before,
-.sigil-ring::after {
-  content: "✶ ☽ ☿ ♀ ☉ ♂ ♄";
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  font-size: 0.55rem;
-  letter-spacing: 0.35em;
-  color: rgba(248, 244, 255, 0.8);
-  text-shadow: var(--glow-purple);
-}
-
-.sigil-ring::before { top: -8px; }
-.sigil-ring::after { bottom: -8px; transform: scaleX(-1); }
-
 .sigil-core {
-  position: relative;
-  width: 36px;
-  height: 36px;
+  width: 36px; height: 36px;
   border-radius: 999px;
   background: radial-gradient(circle, var(--accent-purple), transparent);
   box-shadow:
-    0 0 18px rgba(187, 107, 255, 0.95),
-    0 0 28px rgba(255, 62, 158, 0.8);
+    0 0 18px rgba(187,107,255,0.95),
+    0 0 28px rgba(255,62,158,0.8);
   animation: pulse 3.4s ease-in-out infinite;
-}
-
-.sigil-core::before,
-.sigil-core::after {
-  content: "";
-  position: absolute;
-  inset: 8px;
-  border-radius: 4px;
-  border: 1px solid rgba(248, 244, 255, 0.8);
-  transform: rotate(45deg);
-}
-
-.sigil-core::after {
-  transform: rotate(-45deg);
-}
-
-@keyframes pulse {
-  0%,100% { transform: scale(0.9); opacity: 0.85; }
-  50% { transform: scale(1.05); opacity: 1; }
 }
 
 @keyframes spin {
@@ -553,53 +423,33 @@ textarea {
   to { transform: rotate(360deg); }
 }
 
-/* FOOTER */
+@keyframes pulse {
+  0%,100% { transform: scale(0.9); opacity: 0.85; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
 .site-footer {
   margin-top: 3.5rem;
   padding: 1.7rem;
-  border-top: 1px solid var(--border-subtle);
   text-align: center;
   font-size: 0.95rem;
   color: var(--text-muted);
-  background: rgba(6, 3, 12, 0.96);
+  background: rgba(6,3,12,0.96);
+  border-top: 1px solid var(--border-subtle);
 }
 
-/* Responsive tweaks */
+/* ============================================================
+   RESPONSIVE FIXES
+   ============================================================ */
 @media (max-width: 720px) {
   .rune-frame {
     padding: 2rem 1.4rem 2.2rem;
   }
-  .rune-frame-side { display: none; }
-  .sigil { transform: scale(0.8); right: 10px; bottom: 16px; }
-  .section-heading {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .site-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.6rem;
-  }
-  .nav-links {
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-  .nav-links a {
-    margin-left: 0;
-    margin-right: 0.6rem;
-    margin-bottom: 0.4rem;
+  .sigil {
+    transform: scale(0.8);
+    right: 10px; bottom: 16px;
   }
 }
-/* Small blog images for posts */
-.blog-img-sm {
-  display: block;
-  max-width: 38%;
-  margin: 1.4rem auto;
-  border-radius: 1rem;
-  border: 1px solid rgba(255,255,255,0.25);
-  box-shadow: 0 0 14px rgba(187, 107, 255, 0.35);
-}
-
-
-
