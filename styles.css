@@ -333,6 +333,18 @@ main {
   gap: 1.8rem;
   margin-top: 1.6rem;
 }
+.product-image {
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+  border: 1px solid rgba(244, 239, 255, 0.35);
+}
+
+.product-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
 @media (min-width: 768px) {
   .tarot-grid {
@@ -561,3 +573,4 @@ textarea {
     margin-bottom: 0.4rem;
   }
 }
+
