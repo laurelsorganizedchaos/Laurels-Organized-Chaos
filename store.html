@@ -2,115 +2,113 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Laurel's Organized Chaos | Store</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laurel’s Organized Chaos – Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Gothic fantasy fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="page">
+  <header class="site-header">
+    <div>
+      <div class="logo-text">Laurel’s Organized Chaos</div>
+      <div class="site-tagline">digital chaos tools for witchy humans.</div>
+    </div>
 
-    <!-- Header -->
-    <header class="site-header">
-      <div class="logo-area">
-        <span class="logo-mark">☽✧</span>
-        <div class="logo-text">
-          <h1>Laurel's Organized Chaos</h1>
-          <p class="tagline">spooky systems for a beautifully messy life</p>
-        </div>
+    <nav class="nav-links">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="blog.html" data-nav="blog">Blog</a>
+      <a href="store.html" data-nav="store">Store</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="contact.html" data-nav="contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page-wrapper">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="rune-frame">
+        <div class="rune-frame-side left">ᛞ ᛟ ᛉ ᛇ</div>
+        <div class="rune-frame-side right">ᛇ ᛉ ᛟ ᛞ</div>
+
+        <h1 class="hero-title">The Chaos Shop</h1>
+        <p class="hero-lead">
+          Witchy, goth, slightly unhinged tools to make your life feel a little more organized,
+          even when everything is on fire.
+        </p>
+        <p class="hero-sub">
+          Digital planners, spooky wallpapers, and other pretty little systems for messy humans.
+          Build your routine without killing your soul.
+        </p>
+      </div>
+    </section>
+
+    <!-- Blood-drip divider -->
+    <div class="divider-blood" aria-hidden="true">
+      <div class="divider-blood-line"></div>
+      <div class="drip d1"></div>
+      <div class="drip d2"></div>
+      <div class="drip d3"></div>
+    </div>
+
+    <!-- Product grid (you can wire to Printful/Printify later) -->
+    <section>
+      <div class="section-heading">
+        <h2>Featured Chaos Tools</h2>
+        <small>Placeholders for now — we’ll hook these to real products.</small>
       </div>
 
-      <nav class="main-nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="blog.html" class="nav-link">Blog</a>
-        <a href="store.html" class="nav-link active">Store</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </nav>
-    </header>
+      <div class="tarot-grid">
+        <article class="tarot-card">
+          <div class="tarot-label-top">Digital Planner</div>
+          <div class="tarot-symbol">✶</div>
+          <h3 class="tarot-title">Goth Witch Life Planner</h3>
+          <p class="tarot-text">
+            A full digital planner for the emotionally exhausted overachiever: monthly spreads,
+            daily chaos capture, habit & mood tracking, and sarcastic affirmations.
+          </p>
+          <div class="tarot-meta">Coming soon · PDF / Printable</div>
+          <div class="tarot-label-bottom">Plan the chaos</div>
+        </article>
 
-    <main>
+        <article class="tarot-card">
+          <div class="tarot-label-top">Wallpapers</div>
+          <div class="tarot-symbol">☾</div>
+          <h3 class="tarot-title">Witchy Phone & Desktop Set</h3>
+          <p class="tarot-text">
+            Black, pink, purple, and blue witchcore wallpapers to make your phone and laptop feel
+            like home for your inner goblin.
+          </p>
+          <div class="tarot-meta">Coming soon · Digital download</div>
+          <div class="tarot-label-bottom">Dress your screens</div>
+        </article>
 
-      <!-- Intro -->
-      <section class="section">
-        <h2 class="section-title">The Chaos Shop</h2>
-        <p class="section-text">
-          Welcome to the softer, darker corner of the internet where I turn my
-          brain, my story, and my aesthetic into things you can actually keep.
-          Think gothic, witchy, feminine, a little haunted, and a little hopeful.
-        </p>
-        <p class="section-text" style="margin-top: 0.8rem;">
-          Everything here is designed for people who live in between:
-          between burnout and rebuilding, between softness and edge, between
-          “I’m so tired” and “I still want more from my life.”
-        </p>
-      </section>
+        <article class="tarot-card">
+          <div class="tarot-label-top">Print-on-Demand</div>
+          <div class="tarot-symbol">🩸</div>
+          <h3 class="tarot-title">“Running on Trauma & Caffeine” Mug</h3>
+          <p class="tarot-text">
+            For the mornings when you’re doing your best with questionable sleep and too much
+            backstory. Dark, funny, and painfully accurate.
+          </p>
+          <div class="tarot-meta">Coming soon · Printful / Printify</div>
+          <div class="tarot-label-bottom">Sip the chaos</div>
+        </article>
+      </div>
+    </section>
+  </main>
 
-      <!-- Filters (visual only for now) -->
-      <section class="section">
-        <div class="section-header-row">
-          <h3 class="section-title">Browse by Category</h3>
-        </div>
-
-        <div class="blog-filters">
-          <button class="filter-pill filter-pill-active" type="button">All</button>
-          <button class="filter-pill" type="button">Drinkware</button>
-          <button class="filter-pill" type="button">Tote Bags</button>
-          <button class="filter-pill" type="button">Digital Art</button>
-          <button class="filter-pill" type="button">Journals</button>
-          <button class="filter-pill" type="button">Wallpapers</button>
-          <button class="filter-pill" type="button">Bundle</button>
-          <button class="filter-pill" type="button">Other</button>
-        </div>
-        <p class="section-text" style="font-size: 0.8rem; margin-top: 0.6rem;">
-          Filters are visual for now — everything below is still clickable. We can wire real filtering
-          later once your product list grows.
-        </p>
-      </section>
-
-      <!-- Products grid (auto-filled by script.js) -->
-      <section class="section">
-        <h3 class="section-title">Featured Products</h3>
-
-        <div id="store-products" class="card-grid">
-          <!-- Product cards will be injected by script.js -->
-        </div>
-      </section>
-
-      <!-- Future store plans -->
-      <section class="section">
-        <h3 class="section-title">What’s Coming Next</h3>
-        <p class="section-text">
-          This is just the start. As I build out Laurel’s Organized Chaos, this shop will grow into
-          a full collection of dark feminine tools, art, and cozy chaos decor.
-        </p>
-        <p class="section-text" style="margin-top: 0.8rem;">
-          As more products drop, we’ll:
-        </p>
-        <ul class="section-text" style="list-style: disc; padding-left: 1.2rem; margin-top: 0.1rem;">
-          <li>Connect more Printful / Printify items like blankets, hoodies, and prints.</li>
-          <li>Organize everything into clear categories (mugs, totes, digital, home, etc.).</li>
-          <li>Refine this page so it feels like a full gothic boutique, not just a product list.</li>
-        </ul>
-      </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-      <p>© <span id="year"></span> Laurel's Organized Chaos · It’s your life, everyone else is just in it.</p>
-    </footer>
-
+  <!-- Animated neon witch sigil -->
+  <div class="sigil" aria-hidden="true">
+    <div class="sigil-ring"></div>
+    <div class="sigil-core"></div>
   </div>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-  <script src="script.js"></script>
+  <footer class="site-footer">
+    © 2025 Laurel’s Organized Chaos · Chaos, but make it witchy.
+  </footer>
 </body>
 </html>
