@@ -12,6 +12,14 @@ const BLOG_BASE_PATH = "";
 // Master post list – add new posts here
 const POSTS = [
   {
+  slug: "post-grassroots-review.html",
+  title: "Grassroots Books Reno NV – A Chaotic Bookworm's Heaven",
+  tag: "Local Love",
+  snippet:
+    "Ten years of loving this Reno gem — $5 bag sales, free book coupons, and chaotic book-nerd bliss. A 1,000,000/100 must-visit."
+},
+
+  {
     slug: "chaotically-blessed-thanksgiving.html",
     title: "A Chaotically Blessed Thanksgiving (Hold the Family Drama)",
     tag: "Mom Life",
@@ -282,3 +290,4 @@ document.addEventListener("DOMContentLoaded", () => {
   renderFeaturedProducts(); // new: auto-fill products on home
   highlightActiveNav();
 });
+
