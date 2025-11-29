@@ -177,7 +177,7 @@ a:hover {
 .rune-frame::after { bottom: 8px; transform: scaleX(-1); }
 
 /* ============================================================
-   BLOG POST STYLING (Universal)
+   BLOG POST STYLING
    ============================================================ */
 
 .blog-post {
@@ -196,7 +196,7 @@ a:hover {
   margin-bottom: 1.6rem;
 }
 
-/* Small centered images */
+/* Single centered images */
 .blog-image {
   margin: 1.6rem 0;
   text-align: center;
@@ -276,6 +276,18 @@ a:hover {
   background: var(--blood-red);
   border-radius: 999px;
   top: 13px;
+  box-shadow: 0 0 8px rgba(179,19,47,0.8);
+}
+
+.drip::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -3px;
+  width: 15px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--blood-red);
 }
 
 .drip.d1 { left: 18%; }
@@ -283,7 +295,7 @@ a:hover {
 .drip.d3 { left: 78%; height: 16px; }
 
 /* ============================================================
-   TAROT CARD GRID (Blog + Home)
+   TAROT CARD GRID (Blog + Products)
    ============================================================ */
 .tarot-grid {
   display: grid;
@@ -304,6 +316,9 @@ a:hover {
   padding: 1.2rem 1rem 1.6rem;
   box-shadow: 0 0 28px rgba(0,0,0,0.9);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .tarot-card::before {
@@ -312,6 +327,7 @@ a:hover {
   inset: 8px;
   border: 1px dashed rgba(244,239,255,0.4);
   border-radius: 1rem;
+  pointer-events: none;
 }
 
 .tarot-label-top,
@@ -323,8 +339,11 @@ a:hover {
   color: rgba(245,241,255,0.8);
 }
 
-.tarot-label-bottom { margin-top: auto; }
+.tarot-label-bottom {
+  margin-top: 0.5rem;
+}
 
+/* tarot symbol + title + text */
 .tarot-symbol {
   text-align: center;
   font-size: 1.5rem;
@@ -337,10 +356,53 @@ a:hover {
   margin: 0.4rem 0 0.5rem;
 }
 
-.tarot-title a { color: var(--text-main); }
+.tarot-title a {
+  color: var(--text-main);
+}
+
+.tarot-text {
+  font-size: 0.98rem;
+  text-align: center;
+  color: var(--text-main);
+  padding: 0 0.4rem;
+}
+
+.tarot-meta {
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--text-muted);
+  margin-top: 0.4rem;
+}
 
 /* ============================================================
-   STORE LISTING GRID
+   PRODUCT IMAGES INSIDE TAROT CARDS (Store + Home Featured)
+   ============================================================ */
+
+.product-image {
+  margin: 0.6rem 0 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image img {
+  max-width: 100%;
+  max-height: 180px;       /* 🔹 cap the height so they don’t overlap */
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 0.8rem;
+}
+
+/* Slightly taller cap on very small screens so products are still visible */
+@media (max-width: 600px) {
+  .product-image img {
+    max-height: 220px;
+  }
+}
+
+/* ============================================================
+   STORE GRID (legacy store-card if you ever use it)
    ============================================================ */
 .store-grid {
   display: grid;
@@ -368,17 +430,6 @@ a:hover {
   max-width: 420px;
   border-radius: 0.8rem;
   margin-bottom: 1rem;
-}
-
-.store-card h3 { margin-bottom: 0.3rem; }
-
-.store-card a.btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.6rem 1.4rem;
-  border-radius: 999px;
-  background: var(--accent-purple);
-  color: #fff;
 }
 
 /* ============================================================
