@@ -512,7 +512,7 @@ a:hover {
   width: 115%;       /* zoom a bit */
   max-width: none;
   height: auto;
-  margin-left: -6.5%; /* shift left so visual center moves right */
+  margin-left: -8.5%; /* shift left so visual center moves right */
 }
 
 /* intro rune-frame right under banner */
@@ -548,6 +548,7 @@ a:hover {
     right: 10px; bottom: 16px;
   }
 }
+
 
 
 
