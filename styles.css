@@ -503,12 +503,16 @@ a:hover {
   border: 1px solid var(--card-border);
   box-shadow: 0 0 32px rgba(0, 0, 0, 0.95);
   margin-bottom: 2rem;
+  position: relative;
 }
 
+/* Nudge + slight zoom so the composition looks centered */
 .hero-banner img {
   display: block;
-  width: 100%;
+  width: 115%;       /* zoom a bit */
+  max-width: none;
   height: auto;
+  margin-left: -7.5%; /* shift left so visual center moves right */
 }
 
 /* intro rune-frame right under banner */
@@ -544,4 +548,5 @@ a:hover {
     right: 10px; bottom: 16px;
   }
 }
+
 
