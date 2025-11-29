@@ -5,17 +5,19 @@
   <title>Laurel’s Organized Chaos – Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Gothic fantasy fonts -->
+  <!-- Fantasy serif fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
 
+  <!-- NOTE: correct filename: styles.css -->
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
 </head>
 <body>
+  <!-- HEADER -->
   <header class="site-header">
     <div>
       <div class="logo-text">Laurel’s Organized Chaos</div>
-      <div class="site-tagline">Goth mom, soft witch, professional chaos curator.</div>
+      <div class="site-tagline">Goth mom, soft witch, organized disaster.</div>
     </div>
 
     <nav class="nav-links">
@@ -34,14 +36,14 @@
         <div class="rune-frame-side left">ᛉ ᛟ ᛞ ᛇ</div>
         <div class="rune-frame-side right">ᛇ ᛞ ᛟ ᛉ</div>
 
-        <h1 class="hero-title">Surviving on Chaos, Caffeine, and Sheer Willpower</h1>
+        <h1 class="hero-title">Laurel’s Organized Chaos</h1>
         <p class="hero-lead">
           Dark humor, witch energy, mom chaos, college brain, and a business to build — all crammed
           into one slightly sleep-deprived body wearing black leggings and eyeliner.
         </p>
         <p class="hero-sub">
-          If you’re here for perfectly curated influencer bullshit, you’re lost. If you’re here for
-          honest mess, witchy vibes, and trying again (and again), you’re home.
+          This is my digital lair: blog posts, chaos tools, witchy merch, and honest stories about
+          trying to heal, parent, study, love, and build something real out of the mess.
         </p>
 
         <div class="hero-row">
@@ -86,7 +88,7 @@
       <div class="drip d3"></div>
     </div>
 
-    <!-- Tarot-style latest posts (auto-filled by JS) -->
+    <!-- Latest blog posts -->
     <section>
       <div class="section-heading">
         <h2>Latest Chaos</h2>
@@ -96,42 +98,23 @@
       <div id="latest-chaos-grid" class="tarot-grid"></div>
     </section>
 
-    <!-- Another blood-drip divider between blog + store -->
-    <div class="divider-blood" aria-hidden="true" style="margin-top: 3.2rem;">
+    <!-- Another divider between blog + shop -->
+    <div class="divider-blood" aria-hidden="true" style="margin-top: 3rem;">
       <div class="divider-blood-line"></div>
       <div class="drip d1"></div>
       <div class="drip d2"></div>
       <div class="drip d3"></div>
     </div>
 
-    <!-- Featured store items on home -->
+    <!-- Featured store items – auto-filled by JS -->
     <section>
       <div class="section-heading">
         <h2>Featured from the Chaos Shop</h2>
-        <small>Witchy gear powered by Printful.</small>
+        <small>Automatically pulling my latest witchy chaos tools.</small>
       </div>
 
-      <div class="tarot-grid">
-        <!-- Use three of your products for the homepage -->
-
-    <!-- Featured store items on home – AUTO-FILLED BY JS -->
-    <section>
-      <div class="section-heading">
-        <h2>Featured from the Chaos Shop</h2>
-        <small>Automatically pulling the latest chaos tools.</small>
-      </div>
-
-      <!-- JS will render the 3 most recent products here -->
+      <!-- JS (script.js) will render the 3 most recent products here -->
       <div id="featured-products-grid" class="tarot-grid"></div>
-
-      <p style="margin-top: 1.8rem; text-align:center;">
-        <a href="store.html"
-           style="padding:0.6rem 1.4rem; border-radius:999px; border:1px solid var(--accent-purple); background:linear-gradient(90deg, rgba(255,62,158,0.18), rgba(187,107,255,0.2)); color:var(--text-main); font-family:'Cormorant Garamond',serif; letter-spacing:0.06em; text-transform:uppercase; font-size:0.95rem;">
-          View Full Chaos Shop
-        </a>
-      </p>
-    </section>
-
 
       <p style="margin-top: 1.8rem; text-align:center;">
         <a href="store.html"
@@ -142,7 +125,7 @@
     </section>
   </main>
 
-  <!-- Animated neon witch sigil -->
+  <!-- Neon witch sigil -->
   <div class="sigil" aria-hidden="true">
     <div class="sigil-ring"></div>
     <div class="sigil-core"></div>
@@ -153,4 +136,3 @@
   </footer>
 </body>
 </html>
-
